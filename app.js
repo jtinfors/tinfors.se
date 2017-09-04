@@ -9,6 +9,8 @@ var index = require('./routes/index');
 
 var app = express();
 
+app.set('port', process.env.PORT || '3000');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -41,4 +43,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+app.listen(app.get('port'), function() {
+	console.log('Listening on => ', app.get('port'));
+});

@@ -45,8 +45,7 @@ router.post('/', function(req, res, next) {
 		console.log('headers from sendGrid => ', sendGridRes.headers);
 		res.render('result', {
 			title: err ? 'Fail..' : 'Success!',
-			status: sendGridRes.statusCode,
-			body: sendGridRes.body
+			status: sendGridRes.statusCode
 		});
 	});
 });

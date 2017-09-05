@@ -43,7 +43,10 @@ router.post('/', function(req, res, next) {
 		console.log('status from sendGrid => ', sendGridRes.statusCode);
 		console.log('body from sendGrid => ', sendGridRes.body);
 		console.log('headers from sendGrid => ', sendGridRes.headers);
-		res.render('result', { title: err ? 'Fail..' : 'Success!', status: sendGridRes.statusCode });
+		res.render('result', {
+			title: err ? 'Just nu har vi problem med formuläret. Var god försök senare' : 'Tack för din anmälan! Vi hör av oss!',
+			status: sendGridRes.statusCode
+		});
 	});
 });
 

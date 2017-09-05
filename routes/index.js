@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var sendEmail = require('../send_email');
 
 var kidsCounter = [
 	{ num: 0, textual: 'Inga' },
@@ -35,8 +36,18 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-	console.log(req.body);
-	res.render('success', { title: 'Success' });
+	console.log('Attempting to send email with this body => ', req.body);
+
+	sendEmail(req.body, function(err, res) {
+		console.log('status from sendGrid => ', res.statusCode);
+		console.log('body from sendGrid => ', res.body);
+		console.log('headers from sendGrid => ', res.headers);
+		res.render('result', {
+			title: err ? 'Fail..' : 'Success!',
+			status: res.statusCode,
+			body: res.body
+		});
+	});
 });
 
 module.exports = router;

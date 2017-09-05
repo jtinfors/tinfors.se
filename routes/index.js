@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var sendEmail = require('../send_email');
+// var sendEmail = require('../send_email');
+var sendit = require('../send_email_custom');
 
 var kidsCounter = [
 	{ num: 0, textual: 'Inga' },
@@ -38,7 +39,7 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
 	console.log('Attempting to send email with this body => ', req.body);
 
-	sendEmail(req.body, function(err, sendGridRes) {
+	sendit(req.body, function(err, sendGridRes) {
 		console.log('status from sendGrid => ', sendGridRes.statusCode);
 		console.log('body from sendGrid => ', sendGridRes.body);
 		console.log('headers from sendGrid => ', sendGridRes.headers);

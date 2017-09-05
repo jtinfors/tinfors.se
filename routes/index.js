@@ -43,7 +43,7 @@ router.post('/', function(req, res, next) {
 		console.log('status from sendGrid => ', sendGridRes.statusCode);
 		console.log('body from sendGrid => ', sendGridRes.body);
 		console.log('headers from sendGrid => ', sendGridRes.headers);
-		res.render('result', { title: err ? 'Fail..' : 'Success!' });
+		res.render('result', { title: err ? 'Fail..' : 'Success!', status: sendGridRes.statusCode });
 	});
 });
 

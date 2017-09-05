@@ -38,14 +38,14 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
 	console.log('Attempting to send email with this body => ', req.body);
 
-	sendEmail(req.body, function(err, res) {
-		console.log('status from sendGrid => ', res.statusCode);
-		console.log('body from sendGrid => ', res.body);
-		console.log('headers from sendGrid => ', res.headers);
+	sendEmail(req.body, function(err, sendGridRes) {
+		console.log('status from sendGrid => ', sendGridRes.statusCode);
+		console.log('body from sendGrid => ', sendGridRes.body);
+		console.log('headers from sendGrid => ', sendGridRes.headers);
 		res.render('result', {
 			title: err ? 'Fail..' : 'Success!',
-			status: res.statusCode,
-			body: res.body
+			status: sendGridRes.statusCode,
+			body: sendGridRes.body
 		});
 	});
 });

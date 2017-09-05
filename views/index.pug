@@ -1,47 +1,61 @@
 extends layout
 
 block content
-  h1= title
-  p Vi har fina lägenheter i olika storlekar och i bra lägen i den norra delen av Örebro. Här bor du i ett trivsamt område med promenadavstånd till stadens centrum, till resecentrum och till rekreationsområdet mot Hjälmarens strand. I naturreservatet Rynningeviken finns vintertid en möjlighet till skridskoåkning på naturis och sommartid till ett dopp i Alnängsbadet.
-  p Är du intresserad av att hyra lägenhet hos Tinfors Fastigheter? Fyll då i intresseanmälan nedan.
+  div.container
+    h1= title
+    p Vi har fina lägenheter i olika storlekar och i bra lägen i den norra delen av Örebro. Här bor du i ett trivsamt område med promenadavstånd till stadens centrum, till resecentrum och till rekreationsområdet mot Hjälmarens strand. I naturreservatet Rynningeviken finns vintertid en möjlighet till skridskoåkning på naturis och sommartid till ett dopp i Alnängsbadet.
+    p Är du intresserad av att hyra lägenhet hos Tinfors Fastigheter? Fyll då i intresseanmälan nedan.
 
-  form(method='POST' action='/apply')
-    fieldset
-        legend Intresseanmälan
-        div.form-group
-            label(for='firstname') Förnamn:
-            input#firstname.form-control(type='text', placeholder='Förnamn', name='firstname', required)
-        div.form-group
-            label(for='lastname') Efternamn:
-            input#lastname.form-control(type='text', placeholder='Efternamn', name='lastname', required)
-        div.form-group
-            label(for='streetaddress') Gatuaddress:
-            input#streetaddress.form-control(type='text', placeholder='Gatuaddress', name='lastname', required)
-        div.form-group
-            label(for='zipcode') Postnummer:
-            input#zipcode.form-control(type='text', placeholder='Postnummer', name='zipcode', required)
-        div.form-group
-            label(for='city') Ort:
-            input#city.form-control(type='text', placeholder='Ort', name='city', required)
-        div.form-group
-            label(for='phonenumber') Telefonnummer:
-            input#phonenumber.form-control(type='text', placeholder='Telefonnummer', name='phonenumber', required)
-        div.form-group
-            label(for='email') E-post:
-            input#email.form-control(type='text', placeholder='E-post', name='email', required)
-        div.form-group
-            label(for='age') Ålder:
-            input#age.form-control(type='text', placeholder='Ålder', name='age', required)
-        div.form-group
-            label(for='salary') Årsinkomst:
-            input#salary.form-control(type='text', placeholder='Årsinkomst', name='salary', required)
-        div.form-group
-            label(for='number_family_members') Antal Familjemedlemmar:
-            select#number_family_members.form-control(name='number_family_members', required)
-                each num in familyMembers
-                    option(value=num.num) #{num.textual}
-        div.form-group
-            p Berätta gärna lite om dej själv och vad du har för önskemål på bostad. Sysselsättning, inkomst, husdjur är intressant. Önskad storlek på lägenhet, p-plats, balkong är oxå av intresse.
-            textarea#other.form-control(type='text', placeholder='Önskemål', name='other', rows='3')
-        div.form-group
-            button.btn.btn-primary(type='submit') Skicka
+    form(method='POST' action='/')
+      fieldset
+          legend Intresseanmälan
+          div.form-group
+              label(for='firstname') Förnamn:
+              input#firstname.form-control(type='text', placeholder='Förnamn', name='firstname', required)
+          div.form-group
+              label(for='lastname') Efternamn:
+              input#lastname.form-control(type='text', placeholder='Efternamn', name='lastname', required)
+          div.form-group
+              label(for='streetaddress') Gatuaddress:
+              input#streetaddress.form-control(type='text', placeholder='Gatuaddress', name='streetaddress', required)
+          div.form-group
+              label(for='zipcode') Postnummer:
+              input#zipcode.form-control(type='number', placeholder='Postnummer', name='zipcode', required)
+          div.form-group
+              label(for='city') Ort:
+              input#city.form-control(type='text', placeholder='Ort', name='city', required)
+          div.form-group
+              label(for='phonenumber') Telefonnummer:
+              input#phonenumber.form-control(type='tel', placeholder='Telefonnummer', name='phonenumber', required)
+          div.form-group
+              label(for='email') E-post:
+              input#email.form-control(type='email', placeholder='E-post', name='email', required)
+          div.form-group
+              label(for='age') Ålder:
+              input#age.form-control(type='text', placeholder='Ålder', name='age', required)
+          div.form-group
+              label(for='salary') Årsinkomst:
+              input#salary.form-control(type='text', placeholder='Årsinkomst', name='salary', required)
+          div.form-group
+              label(for='number_family_members') Antal Sökande personer:
+              select#number_family_members.form-control(name='number_family_members', required)
+                  each num in familyCounter
+                      option(value=num.num) #{num.textual}
+          div.form-group
+              label(for='number_kids') ..varav barn:
+              select#number_kids.form-control(name='number_kids', required)
+                  each num in kidsCounter
+                      option(value=num.num) #{num.textual}
+          div.form-group
+              label(for='number_rooms') Önskat antal rum:
+              select#number_rooms.form-control(name='number_rooms', required)
+                  each num in roomCounter
+                      option(value=num.num) #{num.textual}
+          div.form-group
+            p Berätta gärna lite om dej själv och vad du har för önskemål på din framtida bostad. Sysselsättning, eventuella husdjur, intresse för balkong eller p-plats är även intressant information.
+              textarea#other.form-control(type='text', placeholder='Önskemål', name='other', rows='3')
+          div.form-group
+              label(for='moveInDate') Önskat inflyttningsdatum:
+              input#moveInDate.form-control(type='month', name='moveInDate', required)
+          div.form-group
+              button.btn.btn-primary(type='submit') Skicka

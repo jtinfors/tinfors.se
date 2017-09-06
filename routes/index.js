@@ -39,13 +39,13 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
 	console.log('Attempting to send email with this body => ', req.body);
 
-	sendit(req.body, function(err, sendGridRes) {
-		console.log('status from sendGrid => ', sendGridRes.statusCode);
-		console.log('body from sendGrid => ', sendGridRes.body);
-		console.log('headers from sendGrid => ', sendGridRes.headers);
+	sendit(req.body, function(err, sendgridResponse) {
+		console.log('status from sendGrid => ', sendgridResponse.statusCode);
+		console.log('body from sendGrid => ', sendgridResponse.body);
+		console.log('headers from sendGrid => ', sendgridResponse.headers);
 		res.render('result', {
 			title: err ? 'Just nu har vi problem med formuläret. Var god försök senare' : 'Tack för din anmälan! Vi hör av oss!',
-			status: sendGridRes.statusCode
+			status: sendgridResponse.statusCode
 		});
 	});
 });

@@ -1,5 +1,12 @@
 var sendGrid = require('sendgrid')(process.env.SENDGRID_API_KEY);
 
+var createContent = function(data) {
+	return `
+		Förnamn: ${data.firstname}
+		Efternamn: ${data.lastname}
+	`
+}
+
 var sendit = function(body, callback) {
 	var request = sendGrid.emptyRequest({
 	  method: 'POST',
@@ -16,7 +23,7 @@ var sendit = function(body, callback) {
 		content: [
 		  {
 			type: 'text/plain',
-			value: JSON.stringify(body),
+			value: createContent(body)
 		  },
 		],
 	  },

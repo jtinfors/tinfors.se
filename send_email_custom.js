@@ -2,18 +2,18 @@ var sendGrid = require('sendgrid')(process.env.SENDGRID_API_KEY);
 
 var createContent = function(data) {
 	return `
-Namn: ${data.firstname} ${data.lastname}
-Gatuaddress: ${data.streetaddress}
-Postnummer: ${data.zipcode}
-Stad: ${data.city}
-Telefonnummer: ${data.phonenumber}
-E-post: ${data.email}
-Ålder: ${data.age}
-Lön: ${data.salary}
-Antal sökande: ${data.number_family_members} varav ${data.number_kids} är barn
-Önskat antal rum: ${data.number_rooms}
-Önskat inflyttningsdatum: ${data.move_in_date}
-
+Namn: ${data.firstname} ${data.lastname}\n
+Gatuaddress: ${data.streetaddress}\n
+Postnummer: ${data.zipcode}\n
+Stad: ${data.city}\n
+Telefonnummer: ${data.phonenumber}\n
+E-post: ${data.email}\n
+Ålder: ${data.age}\n
+Lön: ${data.salary}\n
+Antal sökande: ${data.number_family_members} varav ${data.number_kids} är barn\n
+Önskat antal rum: ${data.number_rooms}\n
+Önskat inflyttningsdatum: ${data.move_in_date}\n
+\n
 ${data.other}
 `
 }

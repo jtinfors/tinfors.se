@@ -39,8 +39,7 @@ router.post('/', function(req, res, next) {
 	sendit(req.body, function(err, sendgridResponse) {
 		if (err) console.log('Error when sending email => ', err);
 		res.render('result', {
-			title: err ? 'Just nu har vi problem med formuläret. Var god försök senare' : 'Tack för din anmälan! Vi hör av oss!',
-			status: sendgridResponse.statusCode
+			title: err ? 'Just nu har vi problem med formuläret. Var god försök senare' : 'Tack för din anmälan! Vi hör av oss!'
 		});
 	});
 });

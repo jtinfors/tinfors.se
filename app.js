@@ -4,6 +4,7 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var enforce = require('express-sslify');
 
 var index = require('./routes/index');
 
@@ -26,6 +27,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/.well-known/acme-challenge/rD5UeOrcuPXXSwOQCEzmzDdHiIsCgcV3q2_Q78S2yUE', (req, res, next) => {
 	res.send('rD5UeOrcuPXXSwOQCEzmzDdHiIsCgcV3q2_Q78S2yUE.gXThesGexTWMXTt9AMlNeOQzBXa8D9HEeC2kLNRJdjg');
 });
+
+if (process.env.NODE_ENV === 'production') {
+	app.use(enforce.HTTPS());
+}
 
 app.use('/', index);
 

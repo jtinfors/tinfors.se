@@ -29,7 +29,7 @@ app.use('/.well-known/acme-challenge/rD5UeOrcuPXXSwOQCEzmzDdHiIsCgcV3q2_Q78S2yUE
 });
 
 if (process.env.NODE_ENV === 'production') {
-	app.use(enforce.HTTPS());
+	app.use(enforce.HTTPS({ trustProtoHeader: true }));
 }
 
 app.use('/', index);

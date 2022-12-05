@@ -51,18 +51,27 @@ function HomePage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoadingState("loading");
-    fetch("/api/email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    }).then(() => {
-      setLoadingState("done");
-      setTimeout(() => {
-        setData(initialState);
-        setLoadingState("start");
-      }, 6000);
+    grecaptcha.ready(function () {
+      grecaptcha
+        .execute(process.env.NEXT_PUBLIC_reCAPTCHA_site_key, {
+          action: "submit",
+        })
+        .then(function (token) {
+          // Add your logic to submit to your backend server here.
+          fetch("/api/email", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ token, ...data }),
+          }).then(() => {
+            setLoadingState("done");
+            setTimeout(() => {
+              setData(initialState);
+              setLoadingState("start");
+            }, 6000);
+          });
+        });
     });
   };
 

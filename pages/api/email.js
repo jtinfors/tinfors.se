@@ -21,17 +21,33 @@ Antal sökande: ${body.number_family_members} varav ${body.number_kids} är barn
 
 async function email(req, res) {
   try {
-    await sgMail.send({
-      to: process.env.TARGET_EMAIL,
-      from: req.body.email,
-      subject: `Intresseanmälan från ${req.body.firstname} ${req.body.lastname}`,
-      text: formatMessage(req.body),
-    });
+    const verificationRes = await fetch(
+      "https://www.google.com/recaptcha/api/siteverify",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: `secret=${process.env.RECAPTCHA_SECRET}&response=${req.body.token}`,
+      }
+    );
+    const token = await verificationRes.json();
+
+    if (token.score > 0.8) {
+      await sgMail.send({
+        to: process.env.TARGET_EMAIL,
+        from: req.body.email,
+        subject: `Intresseanmälan från ${req.body.firstname} ${req.body.lastname}`,
+        text: formatMessage(req.body),
+      });
+    } else {
+      return res.status(500).json({ error: 'Spam filter' });
+    }
   } catch (error) {
     console.error(error);
     if (error.response) {
       console.error(error.response.body);
-      return res.status(500).json(error.response.body);
+      return res.status(500).json({ error: error.response.body });
     }
   }
   return res.status(200).json({ error: "" });

@@ -26,7 +26,7 @@ var sendit = function(body, callback) {
 		personalizations: [
 		  {
 			cc: [ { email: body.email } ],
-			to: [ { email: 'thomas@tinfors.se', }, ],
+			to: [ { email: 'thomas.tinfors@gmail.com', }, ],
 			subject: `Intresseanmälan från ${body.firstname} ${body.lastname}`,
 		  },
 		],

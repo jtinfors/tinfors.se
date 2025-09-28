@@ -35,13 +35,13 @@ async function email(req, res) {
 
     if (token.score > 0.8) {
       const { data } = await resend.emails.send({
-        from: req.body.email,
+        from: "info@tinfors.se",
         to: process.env.TARGET_EMAIL,
         replyTo: process.env.TARGET_EMAIL,
         subject: `Intresseanmälan från ${req.body.firstname} ${req.body.lastname}`,
         text: formatMessage(req.body),
       });
-      console.log(data);
+      console.log("Return data => ", data);
     } else {
       return res.status(500).json({ error: "Spam filter" });
     }

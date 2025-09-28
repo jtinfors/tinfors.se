@@ -1,5 +1,5 @@
-const sgMail = require("@sendgrid/mail");
-sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+import { Resend } from "resend";
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const formatMessage = (body) => {
   return `
@@ -34,14 +34,16 @@ async function email(req, res) {
     const token = await verificationRes.json();
 
     if (token.score > 0.8) {
-      await sgMail.send({
-        to: process.env.TARGET_EMAIL,
+      const { data } = await resend.emails.send({
         from: req.body.email,
+        to: process.env.TARGET_EMAIL,
+        replyTo: process.env.TARGET_EMAIL,
         subject: `Intresseanmälan från ${req.body.firstname} ${req.body.lastname}`,
         text: formatMessage(req.body),
       });
+      console.log(data);
     } else {
-      return res.status(500).json({ error: 'Spam filter' });
+      return res.status(500).json({ error: "Spam filter" });
     }
   } catch (error) {
     console.error(error);

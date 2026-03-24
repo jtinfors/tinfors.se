@@ -23,7 +23,7 @@ export default function HomePage() {
           </p>
           <div className={styles.heroButtons}>
             <Link href="/hyresledigt" className="btn-primary">
-              Se lediga lägenheter
+              Se Hyresledigt
             </Link>
             <Link href="/intresseanmalan" className="btn-outline">
               Intresseanmälan
@@ -37,9 +37,9 @@ export default function HomePage() {
         <div className={styles.ctaGrid}>
           <Link href="/hyresledigt" className={styles.ctaCard}>
             <div className={styles.ctaIcon}>🏠</div>
-            <h3>Lediga lägenheter</h3>
+            <h3>Hyresledigt</h3>
             <p>Hitta din nästa lägenhet bland våra aktuella lediga objekt.</p>
-            <span className={styles.ctaArrow}>Se lediga lägenheter →</span>
+            <span className={styles.ctaArrow}>Se Hyresledigt →</span>
           </Link>
           <Link href="/intresseanmalan" className={styles.ctaCard}>
             <div className={styles.ctaIcon}>📋</div>
@@ -78,7 +78,7 @@ export default function HomePage() {
             alla våra hyresgäster.
           </p>
           <Link href="/hyresledigt" className="btn-primary">
-            Se lediga lägenheter
+            Se Hyresledigt
           </Link>
         </div>
         <div className={styles.aboutImage}>

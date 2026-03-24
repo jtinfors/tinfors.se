@@ -65,7 +65,7 @@ export default function Layout({ children, title }) {
                   isActive("/hyresledigt") ? styles.active : ""
                 }`}
               >
-                Lediga lägenheter
+                Hyresledigt
               </Link>
             </nav>
             <button
@@ -86,7 +86,7 @@ export default function Layout({ children, title }) {
               }`}
               onClick={() => setMenuOpen(false)}
             >
-              Lediga lägenheter
+              Hyresledigt
             </Link>
             <Link
               href="/hyresinfo"
@@ -140,7 +140,7 @@ export default function Layout({ children, title }) {
               <h4 className={styles.footerSubtitle}>Snabblänkar</h4>
               <ul className={styles.footerLinks}>
                 <li>
-                  <Link href="/hyresledigt">Lediga lägenheter</Link>
+                  <Link href="/hyresledigt">Hyresledigt</Link>
                 </li>
                 <li>
                   <Link href="/intresseanmalan">Intresseanmälan</Link>

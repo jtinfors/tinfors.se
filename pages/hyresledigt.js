@@ -95,9 +95,9 @@ export default function HyresledigtPage() {
     active === "alla" ? listings : listings.filter((l) => l.type === active);
 
   return (
-    <Layout title="Lediga lägenheter">
+    <Layout title="Hyresledigt">
       <div className="page-header">
-        <h1>Lediga lägenheter</h1>
+        <h1>Hyresledigt</h1>
         <p>Lediga lägenheter hos Tinfors Fastigheter</p>
       </div>
 

@@ -18,9 +18,11 @@ export default function KontaktPage() {
             <div className={styles.contactItem}>
               <div className={styles.contactIcon}>✉️</div>
               <div>
-                <div className={styles.contactLabel}>E-post</div>
+                <div className={styles.contactLabel}>Intresseanmälan</div>
                 <div className={styles.contactValue}>
-                  <a href="mailto:info@tinfors.se">info@tinfors.se</a>
+                  <a href="/intresseanmalan">
+                    Använd formuläret för intresseanmälan
+                  </a>
                 </div>
               </div>
             </div>
@@ -30,7 +32,8 @@ export default function KontaktPage() {
               <div>
                 <div className={styles.contactLabel}>Besöksadress</div>
                 <div className={styles.contactValue}>
-                  Besök sker efter överenskommelse.<br />
+                  Besök sker efter överenskommelse.
+                  <br />
                   Örebro
                 </div>
               </div>
@@ -40,30 +43,44 @@ export default function KontaktPage() {
               <div className={styles.contactIcon}>🕐</div>
               <div>
                 <div className={styles.contactLabel}>Svarstid</div>
-                <div className={styles.contactValue}>Vi svarar normalt inom 1–2 arbetsdagar.</div>
+                <div className={styles.contactValue}>
+                  Vi svarar normalt inom 1–2 arbetsdagar.
+                </div>
               </div>
             </div>
           </div>
 
           <div>
-            <div className={styles.card} style={{ marginBottom: '1.25rem' }}>
+            <div className={styles.card} style={{ marginBottom: "1.25rem" }}>
               <h2>Felanmälan</h2>
-              <p className={styles.contactValue} style={{ marginBottom: '1.25rem' }}>
-                Är något trasigt i din lägenhet? Använd vår felanmälan så åtgärdar vi det så snart vi kan.
+              <p
+                className={styles.contactValue}
+                style={{ marginBottom: "1.25rem" }}
+              >
+                Är något trasigt i din lägenhet? Använd vår felanmälan så
+                åtgärdar vi det så snart vi kan.
               </p>
-              <Link href="/felanmalan" className="btn-primary">Gör en felanmälan</Link>
+              <Link href="/felanmalan" className="btn-primary">
+                Gör en felanmälan
+              </Link>
             </div>
 
             <div className={styles.card}>
               <h2>Intresseanmälan</h2>
-              <p className={styles.contactValue} style={{ marginBottom: '1.25rem' }}>
-                Vill du hyra lägenhet hos oss? Fyll i en intresseanmälan så kontaktar vi dig.
+              <p
+                className={styles.contactValue}
+                style={{ marginBottom: "1.25rem" }}
+              >
+                Vill du hyra lägenhet hos oss? Fyll i en intresseanmälan så
+                kontaktar vi dig.
               </p>
-              <Link href="/intresseanmalan" className="btn-secondary">Anmäl intresse</Link>
+              <Link href="/intresseanmalan" className="btn-secondary">
+                Anmäl intresse
+              </Link>
             </div>
           </div>
         </div>
       </div>
     </Layout>
-  )
+  );
 }

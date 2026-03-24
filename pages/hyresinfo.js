@@ -13,12 +13,6 @@ function TabViktigt({ s }) {
   return (
     <div className={s.content}>
       <h2>Viktigt att känna till</h2>
-      <div className={s.infoBox}>
-        <p>
-          Har du frågor om något nedan? Kontakta oss på info@tinfors.se eller
-          via formuläret på sidan Felanmälan.
-        </p>
-      </div>
 
       <h3>Brandvarnare</h3>
       <p>
@@ -34,8 +28,8 @@ function TabViktigt({ s }) {
 
       <h3>Avlopp</h3>
       <p>
-        Häll inte matolja, kaffegrounds eller annat ned i avloppet. Använd
-        alltid hårsil i badrum och dusch för att förhindra stopp.
+        Häll inte matolja, kaffesump eller annat ned i avloppet. Använd alltid
+        hårsil i badrum och dusch för att förhindra stopp.
       </p>
 
       <h3>Golv och väggar</h3>
@@ -103,13 +97,15 @@ function TabUtflytt({ s }) {
       <p>Planerar du att flytta? Här finns information om vad som gäller.</p>
 
       <h3>Uppsägningstid</h3>
-      <p>Uppsägningstiden är tre månader. Uppsägningen ska göras skriftligt.</p>
+      <p>
+        Uppsägningstiden är tre månader. Uppsägningen skall göras skriftligt.
+      </p>
 
       <h3>Städning</h3>
       <p>
         Lägenheten ska vara ordentligt städad vid utflytt. Alla ytor, skåp,
         vitvaror och fönster ska vara rengjorda. Vid brister debiteras
-        hyresgästen för städning.
+        hyresgästen för städning. Kontakta oss för protokoll för städning.
       </p>
 
       <h3>Återlämning av nycklar</h3>

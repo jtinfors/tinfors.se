@@ -37,7 +37,7 @@ export default function HomePage() {
         <div className={styles.ctaGrid}>
           <Link href="/hyresledigt" className={styles.ctaCard}>
             <div className={styles.ctaIcon}>🏠</div>
-            <h3>Hyresledigt</h3>
+            <h3>Lediga lägenheter</h3>
             <p>Hitta din nästa lägenhet bland våra aktuella lediga objekt.</p>
             <span className={styles.ctaArrow}>Se lediga lägenheter →</span>
           </Link>

@@ -261,7 +261,7 @@ export default function IntresseanmalanPage() {
               <div className={`form-group ${formStyles.fullWidth}`}>
                 <label htmlFor="other">
                   Berätta gärna om dig själv och dina önskemål — sysselsättning,
-                  husdjur, önskemål om balkong eller parkeringsplats
+                  önskemål om balkong eller parkeringsplats
                 </label>
                 <textarea
                   id="other"

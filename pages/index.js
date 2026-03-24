@@ -13,13 +13,13 @@ export default function HomePage() {
           className={styles.heroImage}
         />
         <div className={styles.heroContent}>
-          <p className={styles.heroEyebrow}>Örebro · Norra distriktet</p>
+          <p className={styles.heroEyebrow}>Örebro · Norr</p>
           <h1 className={styles.heroTitle}>
             Trivsamma lägenheter i norra Örebro
           </h1>
           <p className={styles.heroSubtitle}>
             Vi erbjuder välskötta lägenheter i bra lägen med promenadavstånd
-            till centrum, resecentrum och natursköna rekreationsområden.
+            till stadens centrum, resecentrum och natursköna rekreationsområden.
           </p>
           <div className={styles.heroButtons}>
             <Link href="/hyresledigt" className="btn-primary">
@@ -67,9 +67,9 @@ export default function HomePage() {
           <h2>Välkommen som hyresgäst hos oss</h2>
           <p>
             Tinfors Fastigheter förvaltar ett bestånd av lägenheter i den norra
-            delen av Örebro. Här bor du i ett trivsamt område med
-            promenadavstånd till stadens centrum, till resecentrum och till
-            rekreationsområdet mot Hjälmarens strand.
+            delen av Örebro. Här bor du i ett trivsamt område med bekvämt
+            promenadavstånd till stadens centrum, resecentrum och till
+            rekreationsområdet vid Hjälmarens strand.
           </p>
           <p>
             I naturreservatet Rynningeviken finns vintertid möjlighet till
@@ -82,10 +82,7 @@ export default function HomePage() {
           </Link>
         </div>
         <div className={styles.aboutImage}>
-          <img
-            src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80&fit=crop"
-            alt="Bostadshus i Örebro"
-          />
+          <img src="/SouthLillaStrand24.png" alt="Bostadshus i Örebro" />
         </div>
       </section>
     </Layout>

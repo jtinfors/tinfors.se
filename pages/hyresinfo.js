@@ -57,10 +57,7 @@ function TabViktigt({ s }) {
       </p>
 
       <h3>Husdjur</h3>
-      <p>
-        Husdjur är tillåtna efter skriftligt godkännande från oss. Husdjur får
-        aldrig vistas i gemensamma utrymmen utan koppel.
-      </p>
+      <p>Husdjur är ej tillåtna.</p>
     </div>
   );
 }
@@ -148,7 +145,7 @@ function TabFaq({ s }) {
     },
     {
       q: "Kan jag ha husdjur?",
-      a: "Husdjur är tillåtna med skriftligt godkännande. Kontakta oss så ser vi vad som gäller för din lägenhet.",
+      a: "Husdjur är ej tillåtna.",
     },
     {
       q: "Vad gör jag om jag tappat bort min nyckel?",

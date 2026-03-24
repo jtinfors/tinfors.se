@@ -1,0 +1,38 @@
+.formWrap {
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 1.5rem;
+}
+
+.fullWidth {
+  grid-column: 1 / -1;
+}
+
+.submitRow {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.successMsg {
+  color: #d44a2e;
+  background: rgba(212, 74, 46, 0.1);
+  border: 1px solid rgba(212, 74, 46, 0.25);
+  border-radius: var(--radius);
+  padding: 0.75rem 1.25rem;
+  font-size: 0.95rem;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}

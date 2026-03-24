@@ -15,22 +15,32 @@ Node version: 18 (see `.nvmrc`)
 
 ## Architecture
 
-Minimal Next.js 13 app for apartment rental inquiries at Tinfors Fastigheter (Örebro, Sweden). JavaScript only — no TypeScript.
+Next.js 13 (pages router) property management website for Tinfors Fastigheter (Örebro, Sweden). JavaScript only — no TypeScript. No `next.config.js` — all defaults.
+
+**Shared layout:** `components/Layout.js` wraps every page with a sticky nav and footer. Uses `next/router` for active link detection. Global CSS variables (colors, spacing) live in `styles/globals.css`.
 
 **Pages:**
-- `pages/index.js` — Single-page rental interest form with client-side `useState` for form state
-- `pages/_document.js` — Adds Bootstrap 5 (CDN) and Google reCAPTCHA v3 script to `<head>`
-- `pages/api/email.js` — API route: validates reCAPTCHA token (score > 0.8), then sends form data via Resend
+- `pages/index.js` — Homepage: hero image, 3 CTA cards, about section
+- `pages/hyresledigt.js` — Listings with category filter; placeholder listings defined inline
+- `pages/intresseanmalan.js` — Rental interest form (sends email via `/api/email`)
+- `pages/felanmalan.js` — Fault report form (sends email via `/api/felanmalan`)
+- `pages/hyresinfo.js` — Tabbed info page (Viktigt / Inflytt / Utflytt / FAQ)
+- `pages/kontakt.js` — Contact info + links to forms
+- `pages/_app.js` — Imports `styles/globals.css`
+- `pages/_document.js` — Adds reCAPTCHA v3 script to `<head>`
+- `pages/api/email.js` — Verifies reCAPTCHA (score > 0.8), sends interest form via Resend
+- `pages/api/felanmalan.js` — Same pattern, sends fault report via Resend
 
-**Styling:** CSS Modules in `/styles/`, Bootstrap 5.2.3 via CDN
+**Styling:** CSS Modules per page/component in `/styles/`. Bootstrap is **not** used — all styles are custom via CSS variables.
+
+**Color scheme:** `--color-primary: #003057` (dark blue), `--color-secondary: #528E9A` (teal), `--color-accent: #D0E6EA` (light blue), `--color-neutral: #EBE8E5`.
 
 ## Email & Form Flow
 
-1. User fills form on `/` and submits
-2. Client executes reCAPTCHA v3, gets token
-3. Token + form data POST to `/api/email`
-4. API verifies token with Google, checks score threshold
-5. On pass, sends formatted email via Resend to `TARGET_EMAIL`
+1. User submits form → client executes reCAPTCHA v3, gets token
+2. Token + form data POST to `/api/email` or `/api/felanmalan`
+3. API verifies token with Google (`score > 0.8`), then sends email via Resend
+4. From: `info@tinfors.se` → To: `TARGET_EMAIL` env var
 
 ## Environment Variables
 

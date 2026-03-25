@@ -82,7 +82,7 @@ export default function HomePage() {
           </Link>
         </div>
         <div className={styles.aboutImage}>
-          <img src="/SouthLillaStrand24.png" alt="Bostadshus i Örebro" />
+          <img src="/Salillastrand24.jpg" alt="Bostadshus i Örebro" />
         </div>
       </section>
     </Layout>

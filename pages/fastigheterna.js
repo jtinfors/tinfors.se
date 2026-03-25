@@ -8,9 +8,9 @@ const properties = [
     name: "Södra Lillåstrand 24",
     location: "Örebro",
     image: "/Salillastrand24.jpg",
-    units: 8,
+    units: 10,
     rooms: "1–4 rum",
-    size: "35–108 m²",
+    size: "23–108 m²",
   },
   {
     slug: "sodra-lillastrand-26",
@@ -18,8 +18,8 @@ const properties = [
     location: "Örebro",
     image: "/Salillastrand26.jpg",
     units: 6,
-    rooms: "1–2 rum",
-    size: "34–62 m²",
+    rooms: "1–3 rum",
+    size: "24–87 m²",
   },
   {
     slug: "hjortstorpsvagen-9",

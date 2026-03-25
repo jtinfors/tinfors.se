@@ -46,11 +46,11 @@ export default function SodraLillastrand26() {
           </div>
           <div className={styles.bofaktaRow}>
             <span className={styles.bofaktaLabel}>Storlek</span>
-            <span className={styles.bofaktaValue}>35–108 m²</span>
+            <span className={styles.bofaktaValue}>24-87 m²</span>
           </div>
           <div className={styles.bofaktaRow}>
             <span className={styles.bofaktaLabel}>Rum</span>
-            <span className={styles.bofaktaValue}>1–4 rok</span>
+            <span className={styles.bofaktaValue}>1–3 rok</span>
           </div>
           <div className={styles.bofaktaRow}>
             <span className={styles.bofaktaLabel}>Område</span>

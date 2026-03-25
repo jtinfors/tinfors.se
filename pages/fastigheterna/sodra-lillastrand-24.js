@@ -42,11 +42,11 @@ export default function SodraLillastrand24() {
           <h3 className={styles.bofaktaTitle}>Bofakta</h3>
           <div className={styles.bofaktaRow}>
             <span className={styles.bofaktaLabel}>Antal lägenheter</span>
-            <span className={styles.bofaktaValue}>8</span>
+            <span className={styles.bofaktaValue}>10</span>
           </div>
           <div className={styles.bofaktaRow}>
             <span className={styles.bofaktaLabel}>Storlek</span>
-            <span className={styles.bofaktaValue}>35–108 m²</span>
+            <span className={styles.bofaktaValue}>23–108 m²</span>
           </div>
           <div className={styles.bofaktaRow}>
             <span className={styles.bofaktaLabel}>Rum</span>
@@ -58,11 +58,11 @@ export default function SodraLillastrand24() {
           </div>
           <div className={styles.bofaktaRow}>
             <span className={styles.bofaktaLabel}>Tvättmaskin</span>
-            <span className={styles.bofaktaValue}>I vissa lägenheter</span>
+            <span className={styles.bofaktaValue}>I samtliga lägenheter</span>
           </div>
           <div className={styles.bofaktaRow}>
-            <span className={styles.bofaktaLabel}>Tvättstuga</span>
-            <span className={styles.bofaktaValue}>Gemensam</span>
+            <span className={styles.bofaktaLabel}>Torktumlare</span>
+            <span className={styles.bofaktaValue}>I samtliga lägenheter</span>
           </div>
           <div className={styles.bofaktaRow}>
             <span className={styles.bofaktaLabel}>Parkering</span>

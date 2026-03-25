@@ -1,0 +1,194 @@
+/* ── Property detail page ── */
+.hero {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.heroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.35;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2.5rem 1.5rem;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.heroTitle {
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 0.25rem;
+}
+
+.heroLocation {
+  font-size: 1rem;
+  color: var(--text-muted);
+}
+
+/* ── Content layout ── */
+.content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 3rem;
+  align-items: start;
+}
+
+.description h2 {
+  font-size: 1.35rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.description p {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+/* ── Bofakta sidebar ── */
+.bofakta {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+}
+
+.bofaktaTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.bofaktaRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.bofaktaRow:last-child {
+  border-bottom: none;
+}
+
+.bofaktaLabel {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.bofaktaValue {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ── Image gallery ── */
+.gallery {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.galleryImage {
+  border-radius: var(--radius);
+  overflow: hidden;
+  height: 200px;
+  border: 1px solid var(--border);
+}
+
+.galleryImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+}
+
+.galleryImage:hover img {
+  opacity: 1;
+}
+
+/* ── CTA banner ── */
+.ctaBanner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem 4rem;
+}
+
+.ctaBannerInner {
+  padding: 2rem;
+  background: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.ctaBannerInner p {
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+}
+
+/* ── Breadcrumb ── */
+.breadcrumb {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1rem 1.5rem 0;
+  font-size: 0.8rem;
+  color: var(--text-dim);
+}
+
+.breadcrumb a {
+  color: var(--text-muted);
+  transition: color 0.15s;
+}
+
+.breadcrumb a:hover {
+  color: var(--accent);
+}
+
+.breadcrumbSep {
+  margin: 0 0.5rem;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 280px;
+  }
+
+  .galleryGrid {
+    grid-template-columns: 1fr;
+  }
+}

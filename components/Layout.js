@@ -33,6 +33,14 @@ export default function Layout({ children, title }) {
             </Link>
             <nav className={styles.nav}>
               <Link
+                href="/fastigheterna"
+                className={`${styles.navLink} ${
+                  isActive("/fastigheterna") ? styles.active : ""
+                }`}
+              >
+                Fastigheterna
+              </Link>
+              <Link
                 href="/hyresinfo"
                 className={`${styles.navLink} ${
                   isActive("/hyresinfo") ? styles.active : ""
@@ -89,6 +97,15 @@ export default function Layout({ children, title }) {
               Hyresledigt
             </Link>
             <Link
+              href="/fastigheterna"
+              className={`${styles.mobileNavLink} ${
+                isActive("/fastigheterna") ? styles.active : ""
+              }`}
+              onClick={() => setMenuOpen(false)}
+            >
+              Fastigheterna
+            </Link>
+            <Link
               href="/hyresinfo"
               className={`${styles.mobileNavLink} ${
                 isActive("/hyresinfo") ? styles.active : ""
@@ -141,6 +158,9 @@ export default function Layout({ children, title }) {
               <ul className={styles.footerLinks}>
                 <li>
                   <Link href="/hyresledigt">Hyresledigt</Link>
+                </li>
+                <li>
+                  <Link href="/fastigheterna">Fastigheterna</Link>
                 </li>
                 <li>
                   <Link href="/intresseanmalan">Intresseanmälan</Link>

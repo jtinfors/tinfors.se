@@ -133,6 +133,34 @@
   opacity: 1;
 }
 
+/* ── Map section ── */
+.mapSection {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.mapTitle {
+  font-size: 1.35rem;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.mapWrapper {
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  height: 400px;
+}
+
+.mapWrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+  filter: grayscale(0.3) brightness(0.85);
+}
+
 /* ── CTA banner ── */
 .ctaBanner {
   max-width: var(--max-width);

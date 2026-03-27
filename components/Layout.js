@@ -49,14 +49,6 @@ export default function Layout({ children, title }) {
                 Hyresinfo
               </Link>
               <Link
-                href="/felanmalan"
-                className={`${styles.navLink} ${
-                  isActive("/felanmalan") ? styles.active : ""
-                }`}
-              >
-                Felanmälan
-              </Link>
-              <Link
                 href="/kontakt"
                 className={`${styles.navLink} ${
                   isActive("/kontakt") ? styles.active : ""
@@ -115,15 +107,6 @@ export default function Layout({ children, title }) {
               Hyresinfo
             </Link>
             <Link
-              href="/felanmalan"
-              className={`${styles.mobileNavLink} ${
-                isActive("/felanmalan") ? styles.active : ""
-              }`}
-              onClick={() => setMenuOpen(false)}
-            >
-              Felanmälan
-            </Link>
-            <Link
               href="/kontakt"
               className={`${styles.mobileNavLink} ${
                 isActive("/kontakt") ? styles.active : ""
@@ -167,9 +150,6 @@ export default function Layout({ children, title }) {
                 </li>
                 <li>
                   <Link href="/hyresinfo">Hyresinfo</Link>
-                </li>
-                <li>
-                  <Link href="/felanmalan">Felanmälan</Link>
                 </li>
                 <li>
                   <Link href="/kontakt">Kontakt</Link>

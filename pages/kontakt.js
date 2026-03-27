@@ -1,6 +1,6 @@
-import Link from 'next/link'
-import Layout from '../components/Layout'
-import styles from '../styles/Kontakt.module.css'
+import Link from "next/link";
+import Layout from "../components/Layout";
+import styles from "../styles/Kontakt.module.css";
 
 export default function KontaktPage() {
   return (
@@ -51,20 +51,6 @@ export default function KontaktPage() {
           </div>
 
           <div>
-            <div className={styles.card} style={{ marginBottom: "1.25rem" }}>
-              <h2>Felanmälan</h2>
-              <p
-                className={styles.contactValue}
-                style={{ marginBottom: "1.25rem" }}
-              >
-                Är något trasigt i din lägenhet? Använd vår felanmälan så
-                åtgärdar vi det så snart vi kan.
-              </p>
-              <Link href="/felanmalan" className="btn-primary">
-                Gör en felanmälan
-              </Link>
-            </div>
-
             <div className={styles.card}>
               <h2>Intresseanmälan</h2>
               <p

@@ -49,14 +49,6 @@ export default function HomePage() {
             </p>
             <span className={styles.ctaArrow}>Anmäl intresse →</span>
           </Link>
-          <Link href="/felanmalan" className={styles.ctaCard}>
-            <div className={styles.ctaIcon}>🔧</div>
-            <h3>Felanmälan</h3>
-            <p>
-              Är något trasigt i din lägenhet? Anmäl felet så åtgärdar vi det.
-            </p>
-            <span className={styles.ctaArrow}>Anmäl fel →</span>
-          </Link>
         </div>
       </section>
 

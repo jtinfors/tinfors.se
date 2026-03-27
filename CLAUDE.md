@@ -23,13 +23,11 @@ Next.js 13 (pages router) property management website for Tinfors Fastigheter (�
 - `pages/index.js` — Homepage: hero image, 3 CTA cards, about section
 - `pages/hyresledigt.js` — Listings with category filter; placeholder listings defined inline
 - `pages/intresseanmalan.js` — Rental interest form (sends email via `/api/email`)
-- `pages/felanmalan.js` — Fault report form (sends email via `/api/felanmalan`)
 - `pages/hyresinfo.js` — Tabbed info page (Viktigt / Inflytt / Utflytt / FAQ)
 - `pages/kontakt.js` — Contact info + links to forms
 - `pages/_app.js` — Imports `styles/globals.css`
 - `pages/_document.js` — Adds reCAPTCHA v3 script to `<head>`
 - `pages/api/email.js` — Verifies reCAPTCHA (score > 0.8), sends interest form via Resend
-- `pages/api/felanmalan.js` — Same pattern, sends fault report via Resend
 
 **Styling:** CSS Modules per page/component in `/styles/`. Bootstrap is **not** used — all styles are custom via CSS variables.
 
@@ -38,7 +36,7 @@ Next.js 13 (pages router) property management website for Tinfors Fastigheter (�
 ## Email & Form Flow
 
 1. User submits form → client executes reCAPTCHA v3, gets token
-2. Token + form data POST to `/api/email` or `/api/felanmalan`
+2. Token + form data POST to `/api/email`
 3. API verifies token with Google (`score > 0.8`), then sends email via Resend
 4. From: `info@tinfors.se` → To: `TARGET_EMAIL` env var
 

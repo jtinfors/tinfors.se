@@ -35,7 +35,7 @@ function TabViktigt({ s }) {
       <h3>Golv och väggar</h3>
       <p>
         Tork upp vattenspill omgående för att förhindra fuktskador. Vid sprickor
-        eller skador i golv och väggar, anmäl detta via felanmälan.
+        eller skador i golv och väggar, anmäl detta.
       </p>
 
       <h3>Sopsortering</h3>

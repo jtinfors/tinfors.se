@@ -41,20 +41,20 @@ export default function Layout({ children, title }) {
                 Fastigheterna
               </Link>
               <Link
+                href="/om"
+                className={`${styles.navLink} ${
+                  isActive("/om") ? styles.active : ""
+                }`}
+              >
+                Om
+              </Link>
+              <Link
                 href="/hyresinfo"
                 className={`${styles.navLink} ${
                   isActive("/hyresinfo") ? styles.active : ""
                 }`}
               >
                 Hyresinfo
-              </Link>
-              <Link
-                href="/kontakt"
-                className={`${styles.navLink} ${
-                  isActive("/kontakt") ? styles.active : ""
-                }`}
-              >
-                Kontakt
               </Link>
               <Link href="/intresseanmalan" className={styles.navLink}>
                 Intresseanmälan
@@ -98,6 +98,15 @@ export default function Layout({ children, title }) {
               Fastigheterna
             </Link>
             <Link
+              href="/om"
+              className={`${styles.mobileNavLink} ${
+                isActive("/om") ? styles.active : ""
+              }`}
+              onClick={() => setMenuOpen(false)}
+            >
+              Om
+            </Link>
+            <Link
               href="/hyresinfo"
               className={`${styles.mobileNavLink} ${
                 isActive("/hyresinfo") ? styles.active : ""
@@ -105,15 +114,6 @@ export default function Layout({ children, title }) {
               onClick={() => setMenuOpen(false)}
             >
               Hyresinfo
-            </Link>
-            <Link
-              href="/kontakt"
-              className={`${styles.mobileNavLink} ${
-                isActive("/kontakt") ? styles.active : ""
-              }`}
-              onClick={() => setMenuOpen(false)}
-            >
-              Kontakt
             </Link>
             <Link
               href="/intresseanmalan"
@@ -150,9 +150,6 @@ export default function Layout({ children, title }) {
                 </li>
                 <li>
                   <Link href="/hyresinfo">Hyresinfo</Link>
-                </li>
-                <li>
-                  <Link href="/kontakt">Kontakt</Link>
                 </li>
               </ul>
             </div>

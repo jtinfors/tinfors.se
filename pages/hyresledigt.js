@@ -15,7 +15,7 @@ const listings = [
     moveIn: "2026-05-01",
     available: true,
     image:
-      "https://homeq-media-live.s3.amazonaws.com/2880/apartment_images/ebc780b19e0a401cbccb9ed7153a2c0e.jpeg",
+      "https://homeq-media-live.s3.amazonaws.com/2880/apartment_images/99197527fd9e4e0190dc5575a789b127.jpeg",
     includes: ["Värme", "Vatten", "Tvättstuga", "Diskmaskin"],
     url: "https://www.homeq.se/lagenhet/237239-1rum-orebro-orebro-lan-hjortstorpsvagen-28",
   },
@@ -47,7 +47,7 @@ const listings = [
     type: "lagenhet",
     address: "Hjortstorpsvägen 9",
     area: "Örebro",
-    rooms: 1,
+    rooms: 2,
     sqm: 75,
     rent: 9902,
     floor: 1,

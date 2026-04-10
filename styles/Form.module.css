@@ -22,13 +22,14 @@
 }
 
 .successMsg {
-  color: #d44a2e;
-  background: rgba(212, 74, 46, 0.1);
-  border: 1px solid rgba(212, 74, 46, 0.25);
+  color: #006400;
+  background: rgba(0, 100, 0, 0.06);
+  border: 1px solid rgba(0, 100, 0, 0.2);
   border-radius: var(--radius);
   padding: 0.75rem 1.25rem;
   font-size: 0.95rem;
   width: 100%;
+  letter-spacing: 0.18px;
 }
 
 @media (max-width: 600px) {

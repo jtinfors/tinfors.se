@@ -6,7 +6,7 @@
 
 /* ── Header ── */
 .header {
-  background: rgba(27, 27, 27, 0.85);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   position: sticky;
@@ -36,22 +36,22 @@
   width: 32px;
   height: 32px;
   background: var(--accent);
-  border-radius: 4px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.85rem;
-  font-weight: 800;
-  color: #fff;
+  font-weight: 700;
+  color: rgba(249, 252, 255, 0.97);
   flex-shrink: 0;
   letter-spacing: -0.02em;
 }
 
 .logoText {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--text);
-  letter-spacing: -0.01em;
+  letter-spacing: 0.08px;
 }
 
 /* Desktop nav */
@@ -66,6 +66,8 @@
   padding: 0.5rem 0.75rem;
   border-radius: var(--radius);
   font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.08px;
   transition: color 0.15s;
 }
 
@@ -77,11 +79,12 @@
 .navCta {
   margin-left: 0.75rem;
   background: var(--accent);
-  color: #fff;
+  color: rgba(249, 252, 255, 0.97);
   padding: 0.5rem 1rem;
   border-radius: var(--radius);
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 500;
+  letter-spacing: 0.08px;
   transition: background 0.15s;
 }
 
@@ -127,6 +130,8 @@
   padding: 0.6rem 0.75rem;
   border-radius: var(--radius);
   font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.08px;
   transition: color 0.15s;
 }
 
@@ -138,11 +143,12 @@
 .mobileNavCta {
   margin-top: 0.5rem;
   background: var(--accent);
-  color: #fff;
+  color: rgba(249, 252, 255, 0.97);
   padding: 0.65rem 0.75rem;
   border-radius: var(--radius);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
+  letter-spacing: 0.08px;
   text-align: center;
   transition: background 0.15s;
 }
@@ -175,6 +181,7 @@
 
 .footerTitle {
   font-size: 1rem;
+  font-weight: 500;
   color: var(--text);
   margin-bottom: 0.75rem;
 }
@@ -182,16 +189,17 @@
 .footerSubtitle {
   font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.07px;
   color: var(--text-dim);
   margin-bottom: 0.75rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .footerText {
   font-size: 0.875rem;
   color: var(--text-muted);
   line-height: 1.7;
+  letter-spacing: 0.18px;
 }
 
 .footerLinks {
@@ -203,12 +211,13 @@
 
 .footerLinks a {
   font-size: 0.875rem;
-  color: var(--text-dim);
+  color: var(--text-muted);
+  letter-spacing: 0.18px;
   transition: color 0.15s;
 }
 
 .footerLinks a:hover {
-  color: var(--text);
+  color: var(--accent);
 }
 
 .footerBottom {
@@ -217,6 +226,7 @@
   text-align: center;
   font-size: 0.8rem;
   color: var(--text-dim);
+  letter-spacing: 0.18px;
   max-width: var(--max-width);
   margin: 0 auto;
 }

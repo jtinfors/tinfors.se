@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  background: var(--bg);
+  background: var(--bg-alt);
 }
 
 .heroImage {
@@ -15,7 +15,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center;
-  opacity: 0.25;
+  opacity: 0.18;
 }
 
 .heroContent {
@@ -32,16 +32,16 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: var(--accent);
-  background: rgba(212, 74, 46, 0.1);
+  background: rgba(27, 97, 201, 0.08);
   padding: 0.3rem 0.75rem;
   border-radius: 999px;
   margin-bottom: 1.25rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .heroTitle {
   font-size: clamp(1.75rem, 4vw, 3rem);
-  font-weight: 800;
+  font-weight: 400;
   margin-bottom: 1rem;
   max-width: 600px;
   line-height: 1.15;
@@ -54,6 +54,7 @@
   max-width: 500px;
   margin-bottom: 2rem;
   line-height: 1.7;
+  letter-spacing: 0.18px;
 }
 
 .heroButtons {
@@ -64,7 +65,7 @@
 
 /* ── CTA cards ── */
 .ctaSection {
-  background: var(--bg-alt);
+  background: var(--bg);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding: 3rem 1.5rem;
@@ -79,12 +80,12 @@
 }
 
 .ctaCard {
-  background: var(--bg-card);
+  background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: var(--radius-card);
   padding: 2rem;
   text-align: center;
-  transition: border-color 0.2s, transform 0.2s;
+  transition: box-shadow 0.2s, transform 0.2s;
   text-decoration: none;
   color: inherit;
   display: flex;
@@ -94,14 +95,14 @@
 }
 
 .ctaCard:hover {
-  border-color: var(--border-hover);
+  box-shadow: var(--shadow-blue);
   transform: translateY(-2px);
 }
 
 .ctaIcon {
   width: 48px;
   height: 48px;
-  background: rgba(212, 74, 46, 0.1);
+  background: rgba(27, 97, 201, 0.08);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -111,20 +112,24 @@
 
 .ctaCard h3 {
   font-size: 1rem;
+  font-weight: 500;
   color: var(--text);
+  letter-spacing: 0.12px;
 }
 
 .ctaCard p {
   font-size: 0.875rem;
   color: var(--text-muted);
   line-height: 1.6;
+  letter-spacing: 0.18px;
 }
 
 .ctaArrow {
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--accent);
   margin-top: auto;
+  letter-spacing: 0.08px;
 }
 
 /* ── About ── */
@@ -145,19 +150,21 @@
   letter-spacing: 0.1em;
   color: var(--accent);
   margin-bottom: 0.75rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .aboutText h2 {
   font-size: 1.75rem;
   color: var(--text);
   margin-bottom: 1.25rem;
+  font-weight: 400;
 }
 
 .aboutText p {
   color: var(--text-muted);
   margin-bottom: 1rem;
   line-height: 1.7;
+  letter-spacing: 0.18px;
 }
 
 .aboutText a {
@@ -166,17 +173,17 @@
 }
 
 .aboutImage {
-  border-radius: var(--radius);
+  border-radius: var(--radius-card);
   overflow: hidden;
   height: 380px;
   border: 1px solid var(--border);
+  box-shadow: var(--shadow-soft);
 }
 
 .aboutImage img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.85;
 }
 
 @media (max-width: 900px) {

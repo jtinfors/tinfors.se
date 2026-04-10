@@ -6,21 +6,23 @@
 }
 
 .card {
-  background: var(--bg-card);
+  background: var(--bg);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: var(--radius-card);
   padding: 2rem;
-  transition: border-color 0.2s;
+  transition: box-shadow 0.2s;
 }
 
 .card:hover {
-  border-color: var(--border-hover);
+  box-shadow: var(--shadow-soft);
 }
 
 .card h2 {
   font-size: 1.1rem;
+  font-weight: 500;
   color: var(--text);
   margin-bottom: 1.5rem;
+  letter-spacing: 0.12px;
 }
 
 .contactItem {
@@ -33,7 +35,7 @@
 .contactIcon {
   width: 34px;
   height: 34px;
-  background: rgba(212, 74, 46, 0.1);
+  background: rgba(27, 97, 201, 0.08);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -45,16 +47,17 @@
 .contactLabel {
   font-size: 0.72rem;
   text-transform: uppercase;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.07px;
   color: var(--text-dim);
   margin-bottom: 0.2rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .contactValue {
   font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.5;
+  letter-spacing: 0.18px;
 }
 
 .contactValue a {

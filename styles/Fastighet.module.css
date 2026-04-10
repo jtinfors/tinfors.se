@@ -3,14 +3,14 @@
   position: relative;
   height: 400px;
   overflow: hidden;
-  background: var(--bg);
+  background: var(--bg-alt);
 }
 
 .heroImage {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.35;
+  opacity: 0.25;
 }
 
 .heroOverlay {
@@ -28,7 +28,7 @@
 
 .heroTitle {
   font-size: clamp(1.5rem, 3.5vw, 2.25rem);
-  font-weight: 800;
+  font-weight: 400;
   color: var(--text);
   margin-bottom: 0.25rem;
 }
@@ -36,6 +36,7 @@
 .heroLocation {
   font-size: 1rem;
   color: var(--text-muted);
+  letter-spacing: 0.18px;
 }
 
 /* ── Content layout ── */
@@ -53,25 +54,28 @@
   font-size: 1.35rem;
   color: var(--text);
   margin-bottom: 1rem;
+  font-weight: 400;
 }
 
 .description p {
   color: var(--text-muted);
   line-height: 1.7;
   margin-bottom: 1rem;
+  letter-spacing: 0.18px;
 }
 
 /* ── Bofakta sidebar ── */
 .bofakta {
-  background: var(--bg-card);
+  background: var(--bg-alt);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: var(--radius-card);
   padding: 1.75rem;
+  box-shadow: var(--shadow-soft);
 }
 
 .bofaktaTitle {
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--text);
   margin-bottom: 1.25rem;
   padding-bottom: 0.75rem;
@@ -93,12 +97,14 @@
 .bofaktaLabel {
   font-size: 0.85rem;
   color: var(--text-muted);
+  letter-spacing: 0.18px;
 }
 
 .bofaktaValue {
   font-size: 0.85rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text);
+  letter-spacing: 0.18px;
 }
 
 /* ── Image gallery ── */
@@ -115,7 +121,7 @@
 }
 
 .galleryImage {
-  border-radius: var(--radius);
+  border-radius: var(--radius-card);
   overflow: hidden;
   height: 200px;
   border: 1px solid var(--border);
@@ -125,12 +131,11 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.85;
   transition: opacity 0.2s;
 }
 
 .galleryImage:hover img {
-  opacity: 1;
+  opacity: 0.85;
 }
 
 /* ── Map section ── */
@@ -144,10 +149,11 @@
   font-size: 1.35rem;
   color: var(--text);
   margin-bottom: 1rem;
+  font-weight: 400;
 }
 
 .mapWrapper {
-  border-radius: var(--radius);
+  border-radius: var(--radius-card);
   overflow: hidden;
   border: 1px solid var(--border);
   height: 400px;
@@ -158,7 +164,6 @@
   height: 100%;
   border: 0;
   display: block;
-  filter: grayscale(0.3) brightness(0.85);
 }
 
 /* ── CTA banner ── */
@@ -172,13 +177,14 @@
   padding: 2rem;
   background: var(--bg-alt);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: var(--radius-card);
   text-align: center;
 }
 
 .ctaBannerInner p {
   margin-bottom: 1rem;
   color: var(--text-muted);
+  letter-spacing: 0.18px;
 }
 
 /* ── Breadcrumb ── */
@@ -188,6 +194,7 @@
   padding: 1rem 1.5rem 0;
   font-size: 0.8rem;
   color: var(--text-dim);
+  letter-spacing: 0.18px;
 }
 
 .breadcrumb a {

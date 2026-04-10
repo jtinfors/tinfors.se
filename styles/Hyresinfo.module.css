@@ -13,9 +13,10 @@
   border-bottom: 2px solid transparent;
   margin-bottom: -1px;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--text-muted);
   cursor: pointer;
+  letter-spacing: 0.08px;
   transition: color 0.15s, border-color 0.15s;
   font-family: inherit;
 }
@@ -33,15 +34,16 @@
   font-size: 1.4rem;
   color: var(--text);
   margin-bottom: 1.5rem;
+  font-weight: 400;
 }
 
 .content h3 {
   font-size: 0.95rem;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.07px;
   color: var(--accent);
   margin: 2rem 0 0.5rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .content p,
@@ -49,6 +51,7 @@
   color: var(--text-muted);
   line-height: 1.7;
   font-size: 0.95rem;
+  letter-spacing: 0.18px;
 }
 
 .content ul {
@@ -61,7 +64,7 @@
 }
 
 .infoBox {
-  background: rgba(212, 74, 46, 0.07);
+  background: rgba(27, 97, 201, 0.04);
   border-left: 3px solid var(--accent);
   border-radius: 0 var(--radius) var(--radius) 0;
   padding: 1rem 1.25rem;
@@ -86,7 +89,7 @@
   margin-top: 0;
   font-size: 0.95rem !important;
   text-transform: none !important;
-  letter-spacing: 0 !important;
+  letter-spacing: 0.12px !important;
   color: var(--text) !important;
 }
 

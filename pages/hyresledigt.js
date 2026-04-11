@@ -5,6 +5,7 @@ import styles from "../styles/Listings.module.css";
 const listings = [
   {
     id: 1,
+    state: "inactive",
     type: "lagenhet",
     address: "Hjortstorpsvägen 28",
     area: "Örebro",
@@ -21,6 +22,7 @@ const listings = [
   },
   {
     id: 2,
+    state: "active",
     type: "lagenhet",
     address: "Hjortstorpsvägen 9",
     area: "Örebro",
@@ -44,6 +46,7 @@ const listings = [
   },
   {
     id: 3,
+    state: "active",
     type: "lagenhet",
     address: "Hjortstorpsvägen 9",
     area: "Örebro",
@@ -67,6 +70,7 @@ const listings = [
   },
   {
     id: 4,
+    state: "inactive",
     type: "lagenhet",
     address: "Hjortstorpsvägen 28",
     area: "Örebro",
@@ -81,7 +85,7 @@ const listings = [
     includes: ["Värme", "Vatten", "Tvättstuga", "Kokvrå", "Dusch"],
     url: "https://www.homeq.se/lagenhet/243340-1rum-%C3%B6rebro-%C3%B6rebro-l%C3%A4n-hjortstorpsv%C3%A4gen-28",
   },
-];
+].filter((l) => l.state === "active");
 
 const categories = [
   { id: "alla", label: "Alla" },

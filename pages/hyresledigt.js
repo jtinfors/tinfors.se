@@ -22,7 +22,7 @@ const listings = [
   },
   {
     id: 2,
-    state: "active",
+    state: "inactive",
     type: "lagenhet",
     address: "Hjortstorpsvägen 9",
     area: "Örebro",

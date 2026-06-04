@@ -15,7 +15,7 @@ Node version: 18 (see `.nvmrc`)
 
 ## Architecture
 
-Next.js 13 (pages router) property management website for Tinfors Fastigheter (Örebro, Sweden). JavaScript only — no TypeScript. No `next.config.js` — all defaults.
+Next.js 16 (pages router) property management website for Tinfors Fastigheter (Örebro, Sweden). JavaScript only — no TypeScript. No `next.config.js` — all defaults.
 
 **Shared layout:** `components/Layout.js` wraps every page with a sticky nav and footer. Uses `next/router` for active link detection. Global CSS variables (colors, spacing) live in `styles/globals.css`.
 
@@ -26,6 +26,8 @@ Next.js 13 (pages router) property management website for Tinfors Fastigheter (�
 - `pages/intresseanmalan.js` — Rental interest form (sends email via `/api/email`)
 - `pages/hyresinfo.js` — Tabbed info page (Viktigt / Inflytt / Utflytt / FAQ)
 - `pages/om.js` — About Tinfors Fastigheter
+- `pages/fastigheterna.js` — Property overview listing all buildings
+- `pages/fastigheterna/*.js` — Individual property detail pages (sodra-lillastrand-24, sodra-lillastrand-26, hjortstorpsvagen-9, hjortstorpsvagen-28)
 - `pages/_app.js` — Imports `styles/globals.css`
 - `pages/_document.js` — Adds reCAPTCHA v3 script to `<head>`
 - `pages/api/email.js` — Verifies reCAPTCHA (score > 0.8), sends interest form via Resend

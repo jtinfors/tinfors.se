@@ -11,6 +11,12 @@ const properties = [
     units: 10,
     rooms: "1–4 rum",
     size: "23–108 m²",
+    studios: {
+      count: 1,
+      size: "23 m²",
+      slug: "sodra-lillastrand-24c",
+      badge: "Nyproduktion",
+    },
   },
   {
     slug: "sodra-lillastrand-26",
@@ -71,6 +77,15 @@ export default function FastigheternaPage() {
                   <span>{prop.rooms}</span>
                   <span>{prop.size}</span>
                 </div>
+                {prop.studios && (
+                  <div className={styles.cardStudio}>
+                    <span>{prop.studios.count} studio</span>
+                    <span>{prop.studios.size}</span>
+                    {prop.studios.badge && (
+                      <span className={styles.cardBadge}>{prop.studios.badge}</span>
+                    )}
+                  </div>
+                )}
                 <span className={styles.cardArrow}>Visa fastighet →</span>
               </div>
             </Link>

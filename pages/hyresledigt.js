@@ -1,4 +1,11 @@
 import { useState } from "react";
+
+const MONTHS = ["januari","februari","mars","april","maj","juni","juli","augusti","september","oktober","november","december"];
+function formatDate(dateStr) {
+  const [year, month, day] = dateStr.split("-").map(Number);
+  return `${day} ${MONTHS[month - 1]} ${year}`;
+}
+import Link from "next/link";
 import Layout from "../components/Layout";
 import styles from "../styles/Listings.module.css";
 
@@ -85,6 +92,23 @@ const listings = [
     includes: ["Värme", "Vatten", "Tvättstuga", "Kokvrå", "Dusch"],
     url: "https://www.homeq.se/lagenhet/243340-1rum-%C3%B6rebro-%C3%B6rebro-l%C3%A4n-hjortstorpsv%C3%A4gen-28",
   },
+  {
+    id: 5,
+    state: "active",
+    type: "lagenhet",
+    address: "Södra Lillåstrand 24C",
+    area: "Örebro",
+    rooms: 1,
+    sqm: 23,
+    rent: 5900,
+    floor: 1,
+    moveInText: "Enligt överenskommelse",
+    available: true,
+    image: "/garageapartments/IMG_3110.webp",
+    includes: ["Pentry", "Badrum", "Tvättmaskin", "Torktumlare", "P-plats finns"],
+    url: "/fastigheterna/sodra-lillastrand-24c",
+  },
+
 ].filter((l) => l.state === "active");
 
 const categories = [
@@ -130,8 +154,9 @@ export default function HyresledigtPage() {
           </div>
         ) : (
           <div className={styles.grid}>
-            {filtered.map((listing) => (
-              <a href={listing.url} key={listing.id}>
+            {filtered.map((listing) => {
+              const isInternal = listing.url.startsWith("/");
+              const cardContent = (
                 <div className={styles.card}>
                   <div className={styles.cardImage}>
                     <img src={listing.image} alt={listing.address} />
@@ -155,16 +180,21 @@ export default function HyresledigtPage() {
                     </div>
                     <div className={styles.cardMoveIn}>
                       Tillträde:{" "}
-                      {new Date(listing.moveIn).toLocaleDateString("sv-SE", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
+                      {listing.moveInText ? listing.moveInText : formatDate(listing.moveIn)}
                     </div>
                   </div>
                 </div>
-              </a>
-            ))}
+              );
+              return isInternal ? (
+                <Link href={listing.url} key={listing.id}>
+                  {cardContent}
+                </Link>
+              ) : (
+                <a href={listing.url} key={listing.id}>
+                  {cardContent}
+                </a>
+              );
+            })}
           </div>
         )}
 

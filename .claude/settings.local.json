@@ -10,7 +10,20 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000)",
       "Bash(kill %1)",
       "Bash(curl -s http://localhost:3001)",
-      "Bash(pkill -f \"next dev\")"
+      "Bash(pkill -f \"next dev\")",
+      "Bash(identify:*)",
+      "Bash(convert /Users/jens/Downloads/Gemini_Generated_Image_yw603eyw603eyw60.png -crop 200x150+996+746 +repage /tmp/watermark_area.png)",
+      "Bash(magick:*)",
+      "Bash(~/.claude/skills/gwt/bin/GeminiWatermarkTool --no-banner -i \"/Users/jens/Downloads/Gemini_Generated_Image_yw603eyw603eyw60.png\" -o \"/Users/jens/projects/tinfors.se/garageapartment1.png\" --denoise ai --sigma 50 --strength 120 -v)",
+      "Bash(~/.claude/skills/gwt/bin/GeminiWatermarkTool --no-banner -i \"/Users/jens/Downloads/Gemini_Generated_Image_yw603eyw603eyw60.png\" -o \"/Users/jens/projects/tinfors.se/garageapartment1.png\" --denoise ns --radius 10 --strength 85 -v)",
+      "Bash(~/.claude/skills/gwt/bin/GeminiWatermarkTool --no-banner -i \"/Users/jens/Downloads/Gemini_Generated_Image_g9d946g9d946g9d9.png\" -o \"/Users/jens/projects/tinfors.se/garageapartment2.png\" --denoise ns --radius 10 --strength 85 -v)",
+      "Bash(~/.claude/skills/gwt/bin/GeminiWatermarkTool --no-banner -i \"/Users/jens/Downloads/Gemini_Generated_Image_ijmye2ijmye2ijmy.png\" -o \"/Users/jens/projects/tinfors.se/glad-jens.png\" --denoise ns --radius 10 --strength 85 -v)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/fastigheterna/sodra-lillastrand-24c)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/fastigheterna)",
+      "Bash(curl -s -o /dev/null -w \" %{http_code}\" http://localhost:3000/hyresledigt)",
+      "Bash(kill 86849 86889)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/hyresledigt)"
     ]
   }
 }

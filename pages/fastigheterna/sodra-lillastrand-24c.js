@@ -38,19 +38,24 @@ export default function SodraLillastrand24C() {
         <div className={styles.description}>
           <h2>Nyproducerad studio i lugnt läge</h2>
           <p>
-            Välplanerad bostad med pentry, badrum och förvaringsmöjligheter i
-            ett lugnt område med närhet till centrum, mataffär och
-            bussförbindelser. Parkeringsplats finns att hyra separat.
+            En välplanerad och effektiv bostad om 23 m² med pentry utrustat med
+            mikrovågsugn och häll, ett fullt badrum med dusch samt egen
+            tvättmaskin och torktumlare. Lägenheten erbjuder smarta
+            förvaringsmöjligheter och ligger i ett lugnt område med god
+            tillgång till centrum, mataffär och bussförbindelser.
+            Parkeringsplats finns att hyra separat.
           </p>
           <p>
             Perfekt för dig som jobbar på USÖ – endast{" "}
             <strong>3 minuter med cykel</strong> eller 10 minuters promenad
-            till Universitetssjukhuset Örebro.
+            till Universitetssjukhuset Örebro. Även ett utmärkt val för dig
+            som studerar vid Örebro universitet, med enkla bussförbindelser
+            och kort resväg till campus.
           </p>
           <p>
             Uthyres omöblerad för <strong>5 900 kr/månad</strong> eller
-            basmöblerad för <strong>6 900 kr/månad</strong>. Inflyttning
-            enligt överenskommelse.
+            basmöblerad (säng, soffa och skrivbord ingår) för{" "}
+            <strong>6 900 kr/månad</strong>. Inflyttning enligt överenskommelse.
           </p>
         </div>
 

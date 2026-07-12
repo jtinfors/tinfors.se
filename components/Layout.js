@@ -4,25 +4,44 @@ import { useRouter } from "next/router";
 import { useState } from "react";
 import styles from "../styles/Layout.module.css";
 
-export default function Layout({ children, title }) {
+const SITE_URL = "https://tinfors.se";
+const DEFAULT_DESCRIPTION =
+  "Tinfors Fastigheter erbjuder trivsamma hyreslägenheter i norra Örebro, med promenadavstånd till centrum och natursköna rekreationsområden.";
+const DEFAULT_IMAGE = `${SITE_URL}/trapphus_banner.jpg`;
+
+export default function Layout({ children, title, description, image }) {
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const isActive = (path) => router.pathname === path;
 
+  const pageTitle = title
+    ? `${title} – Tinfors Fastigheter`
+    : "Tinfors Fastigheter – Lägenheter i Örebro";
+  const pageDescription = description || DEFAULT_DESCRIPTION;
+  const pageImage = image || DEFAULT_IMAGE;
+  const canonicalUrl = `${SITE_URL}${router.asPath.split("?")[0]}`;
+
   return (
     <>
       <Head>
-        <title>
-          {title
-            ? `${title} – Tinfors Fastigheter`
-            : "Tinfors Fastigheter – Lägenheter i Örebro"}
-        </title>
-        <meta
-          name="description"
-          content="Tinfors Fastigheter erbjuder trivsamma lägenheter i norra Örebro."
-        />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="canonical" href={canonicalUrl} />
+
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="sv_SE" />
+        <meta property="og:site_name" content="Tinfors Fastigheter" />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:image" content={pageImage} />
+        <meta property="og:url" content={canonicalUrl} />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={pageImage} />
       </Head>
       <div className={styles.wrapper}>
         <header className={styles.header}>

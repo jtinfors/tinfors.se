@@ -4,7 +4,11 @@ import styles from "../../styles/Fastighet.module.css";
 
 export default function Hjortstorpsvagen28() {
   return (
-    <Layout title="Hjortstorpsvägen 28">
+    <Layout
+      title="Hjortstorpsvägen 28"
+      description="Hjortstorpsvägen 28 i norra Örebro erbjuder 12 lägenheter om 1–2 rum och kök, 21–71 m², i ett lugnt bostadsområde med gemensam tvättstuga."
+      image="https://tinfors.se/Hjortstorpsvagen28.jpg"
+    >
       <div className={styles.hero}>
         <img
           className={styles.heroImage}

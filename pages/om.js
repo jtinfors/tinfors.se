@@ -3,7 +3,10 @@ import styles from "../styles/Om.module.css";
 
 export default function OmPage() {
   return (
-    <Layout title="Om Tinfors Fastigheter">
+    <Layout
+      title="Om Tinfors Fastigheter"
+      description="Tinfors Fastigheter erbjuder trygga och trivsamma hem i Örebro. Läs om vårt familjeföretag och vårt engagemang för hyresgästerna."
+    >
       <section className={styles.hero}>
         <img
           src="/trapphus_banner.jpg"
@@ -19,8 +22,7 @@ export default function OmPage() {
       <section className={styles.content}>
         <div className={styles.inner}>
           <p className={styles.lead}>
-            Sedan 1976 har vi som litet familjeföretag erbjudit trygga och
-            trivsamma hem i Örebro.
+            Vi är ett litet familjeföretag som erbjuder trygga och trivsamma hem i Örebro.
           </p>
           <p>
             Hos oss är personlig service och omtanke alltid i centrum – vi vill

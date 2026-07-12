@@ -4,7 +4,11 @@ import styles from "../../styles/Fastighet.module.css";
 
 export default function Hjortstorpsvagen9() {
   return (
-    <Layout title="Hjortstorpsvägen 9">
+    <Layout
+      title="Hjortstorpsvägen 9"
+      description="Hjortstorpsvägen 9 i norra Örebro erbjuder 16 nyrenoverade lägenheter om 1–2 rum och kök, 31–75 m², i det populära området Hjortstorp."
+      image="https://tinfors.se/Hjortstorpsvagen9.jpg"
+    >
       <div className={styles.hero}>
         <img
           className={styles.heroImage}

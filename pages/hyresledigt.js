@@ -123,7 +123,10 @@ export default function HyresledigtPage() {
     active === "alla" ? listings : listings.filter((l) => l.type === active);
 
   return (
-    <Layout title="Hyresledigt">
+    <Layout
+      title="Hyresledigt"
+      description="Se lediga hyreslägenheter hos Tinfors Fastigheter i norra Örebro. Bläddra bland aktuella objekt eller gör en intresseanmälan."
+    >
       <div className="page-header">
         <h1>Hyresledigt</h1>
         <p>Lediga lägenheter hos Tinfors Fastigheter</p>

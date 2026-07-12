@@ -4,7 +4,11 @@ import styles from "../../styles/Fastighet.module.css";
 
 export default function SodraLillastrand26() {
   return (
-    <Layout title="Södra Lillåstrand 26">
+    <Layout
+      title="Södra Lillåstrand 26"
+      description="Södra Lillåstrand 26 i norra Örebro erbjuder 8 lägenheter om 1–3 rum och kök, 24–87 m², nära Svartån med promenadavstånd till centrum."
+      image="https://tinfors.se/Salillastrand26.jpg"
+    >
       <div className={styles.hero}>
         <img
           className={styles.heroImage}

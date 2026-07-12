@@ -14,7 +14,11 @@ const galleryImages = [
 
 export default function SodraLillastrand24C() {
   return (
-    <Layout title="Södra Lillåstrand 24C – Studio nära USÖ">
+    <Layout
+      title="Södra Lillåstrand 24C – Studio nära USÖ"
+      description="Nyproducerad studio om 23 m² på Södra Lillåstrand 24C i Örebro, endast 3 minuter med cykel till Universitetssjukhuset. Uthyres från 5 900 kr/mån."
+      image="https://tinfors.se/garageapartments/garageapartment1.png"
+    >
       <div className={styles.hero}>
         <img
           className={styles.heroImage}

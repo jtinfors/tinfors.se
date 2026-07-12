@@ -75,7 +75,10 @@ export default function IntresseanmalanPage() {
     setData((prev) => ({ ...prev, [key]: e.target.value }));
 
   return (
-    <Layout title="Intresseanmälan">
+    <Layout
+      title="Intresseanmälan"
+      description="Anmäl ditt intresse för en hyreslägenhet hos Tinfors Fastigheter i norra Örebro. Vi kontaktar dig när en passande lägenhet blir ledig."
+    >
       <div className="page-header">
         <h1>Intresseanmälan</h1>
         <p>

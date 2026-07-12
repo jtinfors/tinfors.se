@@ -49,7 +49,10 @@ const properties = [
 
 export default function FastigheternaPage() {
   return (
-    <Layout title="Fastigheterna">
+    <Layout
+      title="Fastigheterna"
+      description="Se alla fastigheter i Tinfors Fastigheters bestånd i norra Örebro: Södra Lillåstrand och Hjortstorpsvägen, med lägenheter i varierande storlekar."
+    >
       <div className="page-header">
         <h1>Fastigheterna</h1>
         <p>

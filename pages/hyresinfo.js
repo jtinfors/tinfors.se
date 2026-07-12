@@ -174,7 +174,10 @@ export default function HyresinfoPage() {
   const [active, setActive] = useState("viktigt");
 
   return (
-    <Layout title="Hyresinfo">
+    <Layout
+      title="Hyresinfo"
+      description="Praktisk information för dig som hyr hos Tinfors Fastigheter: inflytt, utflytt, viktiga rutiner och svar på vanliga frågor."
+    >
       <div className="page-header">
         <h1>Hyresinfo</h1>
         <p>Praktisk information för dig som bor eller ska flytta in hos oss</p>

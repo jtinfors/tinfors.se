@@ -91,19 +91,13 @@ export default function IntresseanmalanPage() {
       description="Anmäl ditt intresse för en hyreslägenhet hos Tinfors Fastigheter i norra Örebro. Vi kontaktar dig när en passande lägenhet blir ledig."
     >
       <div className="page-header">
-        <h1>Intresseanmälan</h1>
+        <h1>Intresseanmälan för {data.fastighet}</h1>
         <p>
-          Fyll i formuläret nedan så kontaktar vi dig när en lämplig lägenhet
-          blir ledig.
+          Fyll i formuläret nedan så kontaktar vi dig.
         </p>
       </div>
 
       <div className="section">
-        {data.fastighet && (
-          <div className={formStyles.propertyNotice}>
-            Du anmäler intresse för <strong>{data.fastighet}</strong>
-          </div>
-        )}
         <div className={formStyles.formWrap}>
           <form onSubmit={handleSubmit}>
             <input type="hidden" name="fastighet" value={data.fastighet} />

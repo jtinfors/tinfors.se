@@ -23,7 +23,13 @@
       "Bash(curl -s -o /dev/null -w \" %{http_code}\" http://localhost:3000/hyresledigt)",
       "Bash(kill 86849 86889)",
       "Bash(npm run *)",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/hyresledigt)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/hyresledigt)",
+      "Bash(curl -s \"http://localhost:3000/intresseanmalan?fastighet=Test\" -o /dev/null -w \"%{http_code}\\\\n\")",
+      "Bash(curl -s http://localhost:3000/fastigheterna/sodra-lillastrand-24c)",
+      "Skill(run)",
+      "Bash(npx playwright *)",
+      "Bash(curl -sf http://localhost:3000)",
+      "Bash(node /private/tmp/claude-501/-Users-jens-projects-tinfors-se/7524681f-e447-47c2-8462-cd7f41889731/scratchpad/verify.js)"
     ]
   }
 }

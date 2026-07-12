@@ -121,6 +121,7 @@
 }
 
 .galleryImage {
+  position: relative;
   border-radius: var(--radius-card);
   overflow: hidden;
   height: 200px;

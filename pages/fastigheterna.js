@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Layout from "../components/Layout";
 import styles from "../styles/Fastigheterna.module.css";
@@ -70,7 +71,13 @@ export default function FastigheternaPage() {
               className={styles.card}
             >
               <div className={styles.cardImage}>
-                <img src={prop.image} alt={prop.name} />
+                <Image
+                  src={prop.image}
+                  alt={prop.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
+                  style={{ objectFit: "cover" }}
+                />
               </div>
               <div className={styles.cardBody}>
                 <h2 className={styles.cardTitle}>{prop.name}</h2>

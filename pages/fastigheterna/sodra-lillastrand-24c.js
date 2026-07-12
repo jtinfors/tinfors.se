@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Layout from "../../components/Layout";
 import styles from "../../styles/Fastighet.module.css";
@@ -42,10 +43,14 @@ export default function SodraLillastrand24C() {
       jsonLd={jsonLd}
     >
       <div className={styles.hero}>
-        <img
+        <Image
           className={styles.heroImage}
           src="/garageapartments/garageapartment1.png"
           alt="Södra Lillåstrand 24C – exteriör"
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: "cover" }}
         />
         <span className={page.newBadge}>Nyproduktion</span>
         <div className={styles.heroOverlay}>
@@ -164,7 +169,13 @@ export default function SodraLillastrand24C() {
         <div className={styles.galleryGrid}>
           {galleryImages.map((img) => (
             <div key={img.src} className={`${styles.galleryImage} ${img.caption ? page.galleryImageWithCaption : ""}`}>
-              <img src={img.src} alt={img.alt} />
+              <Image
+                src={img.src}
+                alt={img.alt}
+                fill
+                sizes="(max-width: 768px) 50vw, 33vw"
+                style={{ objectFit: "cover" }}
+              />
               {img.caption && <p className={page.galleryCaption}>{img.caption}</p>}
             </div>
           ))}
@@ -174,7 +185,12 @@ export default function SodraLillastrand24C() {
       <div className={page.floorplanSection}>
         <h2 className={page.floorplanTitle}>Planskiss</h2>
         <div className={page.floorplanWrapper}>
-          <img src="/Planskiss_garage_C.png" alt="Planskiss – Södra Lillåstrand 24C" />
+          <Image
+            src="/Planskiss_garage_C.png"
+            alt="Planskiss – Södra Lillåstrand 24C"
+            width={1536}
+            height={1024}
+          />
         </div>
       </div>
 

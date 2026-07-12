@@ -173,6 +173,7 @@
 }
 
 .aboutImage {
+  position: relative;
   border-radius: var(--radius-card);
   overflow: hidden;
   height: 380px;

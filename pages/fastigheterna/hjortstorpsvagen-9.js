@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Layout from "../../components/Layout";
 import styles from "../../styles/Fastighet.module.css";
@@ -28,10 +29,14 @@ export default function Hjortstorpsvagen9() {
       jsonLd={jsonLd}
     >
       <div className={styles.hero}>
-        <img
+        <Image
           className={styles.heroImage}
           src="/Hjortstorpsvagen9.jpg"
           alt="Hjortstorpsvägen 9"
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: "cover" }}
         />
         <div className={styles.heroOverlay}>
           <h1 className={styles.heroTitle}>Hjortstorpsvägen 9</h1>

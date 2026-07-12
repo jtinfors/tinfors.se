@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Layout from "../components/Layout";
 import styles from "../styles/Home.module.css";
@@ -96,7 +97,13 @@ export default function HomePage() {
           </Link>
         </div>
         <div className={styles.aboutImage}>
-          <img src="/Salillastrand24.jpg" alt="Bostadshus i Örebro" />
+          <Image
+            src="/Salillastrand24.jpg"
+            alt="Bostadshus i Örebro"
+            fill
+            sizes="(max-width: 768px) 100vw, 50vw"
+            style={{ objectFit: "cover" }}
+          />
         </div>
       </section>
     </Layout>

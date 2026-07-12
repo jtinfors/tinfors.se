@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Layout from "../components/Layout";
 import styles from "../styles/Om.module.css";
 
@@ -8,10 +9,14 @@ export default function OmPage() {
       description="Tinfors Fastigheter erbjuder trygga och trivsamma hem i Örebro. Läs om vårt familjeföretag och vårt engagemang för hyresgästerna."
     >
       <section className={styles.hero}>
-        <img
+        <Image
           src="/trapphus_banner.jpg"
           alt="Trapphus i Tinfors Fastigheters bestånd"
           className={styles.heroImage}
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: "cover" }}
         />
         <div className={styles.heroContent}>
           <p className={styles.eyebrow}>Om oss</p>

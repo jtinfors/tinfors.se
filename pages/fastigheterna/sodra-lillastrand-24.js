@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import Layout from "../../components/Layout";
 import styles from "../../styles/Fastighet.module.css";
@@ -28,10 +29,14 @@ export default function SodraLillastrand24() {
       jsonLd={jsonLd}
     >
       <div className={styles.hero}>
-        <img
+        <Image
           className={styles.heroImage}
           src="/Salillastrand24.jpg"
           alt="Södra Lillåstrand 24"
+          fill
+          priority
+          sizes="100vw"
+          style={{ objectFit: "cover" }}
         />
         <div className={styles.heroOverlay}>
           <h1 className={styles.heroTitle}>Södra Lillåstrand 24</h1>

@@ -52,6 +52,7 @@
 }
 
 .cardImage {
+  position: relative;
   height: 200px;
   overflow: hidden;
 }

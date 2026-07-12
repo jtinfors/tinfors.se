@@ -2,9 +2,31 @@ import Link from "next/link";
 import Layout from "../components/Layout";
 import styles from "../styles/Home.module.css";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  name: "Tinfors Fastigheter",
+  description:
+    "Tinfors Fastigheter erbjuder trivsamma hyreslägenheter i norra Örebro med promenadavstånd till centrum, resecentrum och natursköna rekreationsområden.",
+  url: "https://tinfors.se",
+  image: "https://tinfors.se/trapphus_banner.jpg",
+  areaServed: {
+    "@type": "City",
+    name: "Örebro",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Örebro",
+    addressCountry: "SE",
+  },
+};
+
 export default function HomePage() {
   return (
-    <Layout>
+    <Layout
+      description="Tinfors Fastigheter erbjuder trivsamma hyreslägenheter i norra Örebro med promenadavstånd till centrum, resecentrum och natursköna rekreationsområden."
+      jsonLd={jsonLd}
+    >
       {/* Hero */}
       <section className={styles.hero}>
         <img

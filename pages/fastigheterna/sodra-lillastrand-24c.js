@@ -12,12 +12,34 @@ const galleryImages = [
   { src: "/garageapartments/garageapartment2.png", alt: "AI-genererad bild av möblerat alternativ", caption: "AI-genererad exempelbild – visar hur lägenheten kan se ut möblerad" },
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Apartment",
+  name: "Södra Lillåstrand 24C – Studio",
+  description:
+    "Nyproducerad studio om 23 m² på Södra Lillåstrand 24C i Örebro, endast 3 minuter med cykel till Universitetssjukhuset. Uthyres från 5 900 kr/mån.",
+  floorSize: {
+    "@type": "QuantitativeValue",
+    value: 23,
+    unitCode: "MTK",
+  },
+  image: "https://tinfors.se/garageapartments/garageapartment1.png",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Södra Lillåstrand 24C",
+    addressLocality: "Örebro",
+    addressCountry: "SE",
+  },
+  url: "https://tinfors.se/fastigheterna/sodra-lillastrand-24c",
+};
+
 export default function SodraLillastrand24C() {
   return (
     <Layout
       title="Södra Lillåstrand 24C – Studio nära USÖ"
       description="Nyproducerad studio om 23 m² på Södra Lillåstrand 24C i Örebro, endast 3 minuter med cykel till Universitetssjukhuset. Uthyres från 5 900 kr/mån."
       image="https://tinfors.se/garageapartments/garageapartment1.png"
+      jsonLd={jsonLd}
     >
       <div className={styles.hero}>
         <img

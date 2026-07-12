@@ -9,7 +9,7 @@ const DEFAULT_DESCRIPTION =
   "Tinfors Fastigheter erbjuder trivsamma hyreslägenheter i norra Örebro, med promenadavstånd till centrum och natursköna rekreationsområden.";
 const DEFAULT_IMAGE = `${SITE_URL}/trapphus_banner.jpg`;
 
-export default function Layout({ children, title, description, image }) {
+export default function Layout({ children, title, description, image, jsonLd }) {
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -42,6 +42,13 @@ export default function Layout({ children, title, description, image }) {
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
         <meta name="twitter:image" content={pageImage} />
+
+        {jsonLd && (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
+        )}
       </Head>
       <div className={styles.wrapper}>
         <header className={styles.header}>

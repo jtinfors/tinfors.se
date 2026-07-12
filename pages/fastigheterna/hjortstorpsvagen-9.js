@@ -2,12 +2,30 @@ import Link from "next/link";
 import Layout from "../../components/Layout";
 import styles from "../../styles/Fastighet.module.css";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ApartmentComplex",
+  name: "Hjortstorpsvägen 9",
+  description:
+    "Hjortstorpsvägen 9 i norra Örebro erbjuder 16 nyrenoverade lägenheter om 1–2 rum och kök, 31–75 m², i det populära området Hjortstorp.",
+  numberOfAccommodationUnits: 16,
+  image: "https://tinfors.se/Hjortstorpsvagen9.jpg",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Hjortstorpsvägen 9",
+    addressLocality: "Örebro",
+    addressCountry: "SE",
+  },
+  url: "https://tinfors.se/fastigheterna/hjortstorpsvagen-9",
+};
+
 export default function Hjortstorpsvagen9() {
   return (
     <Layout
       title="Hjortstorpsvägen 9"
       description="Hjortstorpsvägen 9 i norra Örebro erbjuder 16 nyrenoverade lägenheter om 1–2 rum och kök, 31–75 m², i det populära området Hjortstorp."
       image="https://tinfors.se/Hjortstorpsvagen9.jpg"
+      jsonLd={jsonLd}
     >
       <div className={styles.hero}>
         <img

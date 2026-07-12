@@ -2,12 +2,30 @@ import Link from "next/link";
 import Layout from "../../components/Layout";
 import styles from "../../styles/Fastighet.module.css";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ApartmentComplex",
+  name: "Södra Lillåstrand 26",
+  description:
+    "Södra Lillåstrand 26 i norra Örebro erbjuder 8 lägenheter om 1–3 rum och kök, 24–87 m², nära Svartån med promenadavstånd till centrum.",
+  numberOfAccommodationUnits: 8,
+  image: "https://tinfors.se/Salillastrand26.jpg",
+  address: {
+    "@type": "PostalAddress",
+    streetAddress: "Södra Lillåstrand 26",
+    addressLocality: "Örebro",
+    addressCountry: "SE",
+  },
+  url: "https://tinfors.se/fastigheterna/sodra-lillastrand-26",
+};
+
 export default function SodraLillastrand26() {
   return (
     <Layout
       title="Södra Lillåstrand 26"
       description="Södra Lillåstrand 26 i norra Örebro erbjuder 8 lägenheter om 1–3 rum och kök, 24–87 m², nära Svartån med promenadavstånd till centrum."
       image="https://tinfors.se/Salillastrand26.jpg"
+      jsonLd={jsonLd}
     >
       <div className={styles.hero}>
         <img

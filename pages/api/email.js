@@ -3,7 +3,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 const formatMessage = (body) => {
   return `
-Namn: ${body.firstname} ${body.lastname}\n
+${body.fastighet ? `Intresserad av: ${body.fastighet}\n\n` : ""}Namn: ${body.firstname} ${body.lastname}\n
 Gatuaddress: ${body.streetaddress}\n
 Postnummer: ${body.zipcode}\n
 Stad: ${body.city}\n
@@ -38,7 +38,9 @@ async function email(req, res) {
         from: "info@tinfors.se",
         to: process.env.TARGET_EMAIL,
         replyTo: process.env.TARGET_EMAIL,
-        subject: `Intresseanmälan från ${req.body.firstname} ${req.body.lastname}`,
+        subject: req.body.fastighet
+          ? `Intresseanmälan (${req.body.fastighet}) från ${req.body.firstname} ${req.body.lastname}`
+          : `Intresseanmälan från ${req.body.firstname} ${req.body.lastname}`,
         text: formatMessage(req.body),
       });
       console.log("Return data => ", data);

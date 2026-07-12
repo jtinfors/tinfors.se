@@ -8,7 +8,7 @@ const jsonLd = {
   "@type": "RealEstateAgent",
   name: "Tinfors Fastigheter",
   description:
-    "Tinfors Fastigheter erbjuder trivsamma hyreslägenheter i norra Örebro med promenadavstånd till centrum, resecentrum och natursköna rekreationsområden.",
+    "Tinfors Fastigheter erbjuder trivsamma hyreslägenheter i norra Örebro med promenadavstånd till centrum, resecentrum, USÖ och natursköna rekreationsområden.",
   url: "https://tinfors.se",
   image: "https://tinfors.se/trapphus_banner.jpg",
   areaServed: {
@@ -25,7 +25,7 @@ const jsonLd = {
 export default function HomePage() {
   return (
     <Layout
-      description="Tinfors Fastigheter erbjuder trivsamma hyreslägenheter i norra Örebro med promenadavstånd till centrum, resecentrum och natursköna rekreationsområden."
+      description="Tinfors Fastigheter erbjuder trivsamma hyreslägenheter i norra Örebro med promenadavstånd till centrum, resecentrum, USÖ och natursköna rekreationsområden."
       jsonLd={jsonLd}
     >
       {/* Hero */}

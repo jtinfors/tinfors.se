@@ -114,7 +114,13 @@ export default function Hjortstorpsvagen28() {
       <div className={styles.ctaBanner}>
         <div className={styles.ctaBannerInner}>
           <p>Intresserad av en lägenhet i denna fastighet?</p>
-          <Link href="/intresseanmalan" className="btn-primary">
+          <Link
+            href={{
+              pathname: "/intresseanmalan",
+              query: { fastighet: "Hjortstorpsvägen 28" },
+            }}
+            className="btn-primary"
+          >
             Gör en intresseanmälan
           </Link>
         </div>

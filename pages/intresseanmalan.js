@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import Layout from "../components/Layout";
 import formStyles from "../styles/Form.module.css";
 
@@ -41,11 +42,21 @@ const initialState = {
   number_family_members: 1,
   number_kids: 0,
   other: "",
+  fastighet: "",
 };
 
 export default function IntresseanmalanPage() {
+  const router = useRouter();
   const [loadingState, setLoadingState] = useState("start");
   const [data, setData] = useState(initialState);
+
+  useEffect(() => {
+    if (!router.isReady) return;
+    const { fastighet } = router.query;
+    if (typeof fastighet === "string" && fastighet) {
+      setData((prev) => ({ ...prev, fastighet }));
+    }
+  }, [router.isReady, router.query]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -88,8 +99,14 @@ export default function IntresseanmalanPage() {
       </div>
 
       <div className="section">
+        {data.fastighet && (
+          <div className={formStyles.propertyNotice}>
+            Du anmäler intresse för <strong>{data.fastighet}</strong>
+          </div>
+        )}
         <div className={formStyles.formWrap}>
           <form onSubmit={handleSubmit}>
+            <input type="hidden" name="fastighet" value={data.fastighet} />
             <div className={formStyles.formGrid}>
               <div className="form-group">
                 <label htmlFor="firstname">Förnamn</label>

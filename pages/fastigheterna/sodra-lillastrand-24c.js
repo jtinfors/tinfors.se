@@ -210,7 +210,13 @@ export default function SodraLillastrand24C() {
       <div className={styles.ctaBanner}>
         <div className={styles.ctaBannerInner}>
           <p>Intresserad av denna lägenhet?</p>
-          <Link href="/intresseanmalan" className="btn-primary">
+          <Link
+            href={{
+              pathname: "/intresseanmalan",
+              query: { fastighet: "Södra Lillåstrand 24C" },
+            }}
+            className="btn-primary"
+          >
             Gör en intresseanmälan
           </Link>
         </div>

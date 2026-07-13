@@ -7,11 +7,10 @@ const HOMEQ_URL =
   "https://www.homeq.se/lagenhet/264418-1rum-orebro-orebro-lan-hjortstorpsvagen-28";
 
 const galleryImages = [
-  { src: "/hjortstorpsvagen_28_1/9c8aa8517bbb4d448ff6eb4dbf1df9a8.jpeg", alt: "Rymligt vardagsrum" },
-  { src: "/hjortstorpsvagen_28_1/f474117c7d2344c88de8da4159cc4d95.jpeg", alt: "Vardagsrum med dörrar till kök och hall" },
-  { src: "/hjortstorpsvagen_28_1/8fda6e9b924a46b3a1eea505ac70c0c8.jpeg", alt: "Nyrenoverat badrum med dusch" },
-  { src: "/hjortstorpsvagen_28_1/e376577e821545edbdc989ed44223b3e.jpeg", alt: "Nyrenoverat badrum med handfat" },
-  { src: "/hjortstorpsvagen_28_1/4cc0b6b1545e40d3b6713b7c43db620c.jpeg", alt: "Kök med kylskåp" },
+  { src: "/hjortstorpsvagen_28_44kvm/ebc780b19e0a401cbccb9ed7153a2c0e.jpeg", alt: "Ljust vardagsrum med parkettgolv" },
+  { src: "/hjortstorpsvagen_28_44kvm/f9bc6be4c2814323843f146c322e79e5.jpeg", alt: "Kök med diskmaskin och kylskåp" },
+  { src: "/hjortstorpsvagen_28_44kvm/8c696897f2ec4ec395a98d58a4dfdc13.jpeg", alt: "Nyrenoverat badrum med dusch" },
+  { src: "/hjortstorpsvagen_28_44kvm/99197527fd9e4e0190dc5575a789b127.jpeg", alt: "Hall" },
 ];
 
 const jsonLd = {
@@ -25,7 +24,7 @@ const jsonLd = {
     value: 42,
     unitCode: "MTK",
   },
-  image: "https://tinfors.se/hjortstorpsvagen_28_1/8c48a6dcd7f74a63930ba5fe35cbbe3b.jpeg",
+  image: "https://tinfors.se/hjortstorpsvagen_28_44kvm/01752c39a2554ac3b9a1c4db347ee7dc.jpeg",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Hjortstorpsvägen 28",
@@ -40,13 +39,13 @@ export default function HjortstorpsvagenTvattioattaFinEtta() {
     <Layout
       title="Hjortstorpsvägen 28 – Fin etta på norr, 42 m²"
       description="Fin etta på norr i Örebro, 42 kvm, 6 081 kr/mån. Förstahandskontrakt. Promenadavstånd till USÖ, campus USÖ, city och resecentrum."
-      image="https://tinfors.se/hjortstorpsvagen_28_1/8c48a6dcd7f74a63930ba5fe35cbbe3b.jpeg"
+      image="https://tinfors.se/hjortstorpsvagen_28_44kvm/01752c39a2554ac3b9a1c4db347ee7dc.jpeg"
       jsonLd={jsonLd}
     >
       <div className={styles.hero}>
         <Image
           className={styles.heroImage}
-          src="/hjortstorpsvagen_28_1/8c48a6dcd7f74a63930ba5fe35cbbe3b.jpeg"
+          src="/hjortstorpsvagen_28_44kvm/01752c39a2554ac3b9a1c4db347ee7dc.jpeg"
           alt="Hjortstorpsvägen 28 – kök"
           fill
           priority

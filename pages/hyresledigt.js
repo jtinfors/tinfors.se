@@ -126,6 +126,28 @@ const listings = [
     ],
     url: "/fastigheterna/hjortstorpsvagen-9-tva-rum-kok",
   },
+  {
+    id: 7,
+    state: "active",
+    type: "lagenhet",
+    address: "Hjortstorpsvägen 28",
+    area: "Örebro",
+    rooms: 1,
+    sqm: 44,
+    rent: 5798,
+    floor: 3,
+    moveInText: "Enligt överenskommelse",
+    available: true,
+    image: "/hjortstorpsvagen_28_1/205e1a68f9a941f7a9d83253d71057b7.jpeg",
+    includes: [
+      "Kök",
+      "Badrum",
+      "Tvättstuga",
+      "Förråd",
+      "P-plats tillgängligt i området",
+    ],
+    url: "/fastigheterna/hjortstorpsvagen_28_1_rum_3_van",
+  },
 ].filter((l) => l.state === "active");
 
 const categories = [

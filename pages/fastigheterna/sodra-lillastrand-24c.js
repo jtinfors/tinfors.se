@@ -82,13 +82,10 @@ export default function SodraLillastrand24C() {
           </p>
           <div className={styles.heroCta}>
             <Link
-              href={{
-                pathname: "/intresseanmalan",
-                query: { fastighet: "Södra Lillåstrand 24C" },
-              }}
+              href="https://www.homeq.se/lagenhet/264414-1rum-orebro-orebro-lan-sodra-lillastrand-24"
               className="btn-primary"
             >
-              Gör en intresseanmälan
+              Intresseanmälan via HomeQ
             </Link>
           </div>
         </div>
@@ -251,13 +248,10 @@ export default function SodraLillastrand24C() {
         <div className={styles.ctaBannerInner}>
           <p>Är du intresserad av lägenheten?</p>
           <Link
-            href={{
-              pathname: "/intresseanmalan",
-              query: { fastighet: "Södra Lillåstrand 24C" },
-            }}
+            href="https://www.homeq.se/lagenhet/264414-1rum-orebro-orebro-lan-sodra-lillastrand-24"
             className="btn-primary"
           >
-            Gör en intresseanmälan
+            Intresseanmälan via HomeQ
           </Link>
         </div>
       </div>

@@ -79,13 +79,10 @@ export default function HjortstorpsvagenNioTvaRumKok() {
           </p>
           <div className={styles.heroCta}>
             <Link
-              href={{
-                pathname: "/intresseanmalan",
-                query: { fastighet: "Hjortstorpsvägen 9 – 2 rum och kök" },
-              }}
+              href="https://www.homeq.se/lagenhet/268621-2rum-orebro-orebro-lan-hjortstorpsvagen-9"
               className="btn-primary"
             >
-              Gör en intresseanmälan
+              Intresseanmälan via HomeQ
             </Link>
           </div>
         </div>
@@ -213,13 +210,10 @@ export default function HjortstorpsvagenNioTvaRumKok() {
             kontaktar vi dig!
           </p>
           <Link
-            href={{
-              pathname: "/intresseanmalan",
-              query: { fastighet: "Hjortstorpsvägen 9 – 2 rum och kök" },
-            }}
+            href="https://www.homeq.se/lagenhet/268621-2rum-orebro-orebro-lan-hjortstorpsvagen-9"
             className="btn-primary"
           >
-            Intresseanmälan
+            Intresseanmälan via HomeQ
           </Link>
         </div>
       </div>

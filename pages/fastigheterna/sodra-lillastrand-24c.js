@@ -5,12 +5,34 @@ import styles from "../../styles/Fastighet.module.css";
 import page from "../../styles/SodraLillastrand24C.module.css";
 
 const galleryImages = [
-  { src: "/garageapartments/IMG_3047.webp", alt: "Södra Lillåstrand 24C – exteriör" },
-  { src: "/garageapartments/IMG_3086.webp", alt: "Pentry med mikrovågsugn och diskbänk" },
-  { src: "/garageapartments/IMG_3065.webp", alt: "Badrum med handfat och toalett" },
-  { src: "/garageapartments/IMG_3061.webp", alt: "Badrum med dusch och tvättmaskin" },
-  { src: "/garageapartments/garageapartment1.png", alt: "AI-genererad bild av möblerat alternativ", caption: "AI-genererad exempelbild – visar hur lägenheten kan se ut möblerad" },
-  { src: "/garageapartments/garageapartment2.png", alt: "AI-genererad bild av möblerat alternativ", caption: "AI-genererad exempelbild – visar hur lägenheten kan se ut möblerad" },
+  {
+    src: "/garageapartments/IMG_3047.webp",
+    alt: "Södra Lillåstrand 24C – exteriör",
+  },
+  {
+    src: "/garageapartments/IMG_3086.webp",
+    alt: "Pentry med mikrovågsugn och diskbänk",
+  },
+  {
+    src: "/garageapartments/IMG_3065.webp",
+    alt: "Badrum med handfat och toalett",
+  },
+  {
+    src: "/garageapartments/IMG_3061.webp",
+    alt: "Badrum med dusch och tvättmaskin",
+  },
+  {
+    src: "/garageapartments/garageapartment1.png",
+    alt: "AI-genererad bild av möblerat alternativ",
+    caption:
+      "AI-genererad exempelbild – visar hur lägenheten kan se ut möblerad",
+  },
+  {
+    src: "/garageapartments/garageapartment2.png",
+    alt: "AI-genererad bild av möblerat alternativ",
+    caption:
+      "AI-genererad exempelbild – visar hur lägenheten kan se ut möblerad",
+  },
 ];
 
 const jsonLd = {
@@ -55,7 +77,20 @@ export default function SodraLillastrand24C() {
         <span className={page.newBadge}>Nyproduktion</span>
         <div className={styles.heroOverlay}>
           <h1 className={styles.heroTitle}>Södra Lillåstrand 24C</h1>
-          <p className={styles.heroLocation}>3 min från Universitetssjukhuset Örebro</p>
+          <p className={styles.heroLocation}>
+            3 min från Universitetssjukhuset Örebro
+          </p>
+          <div className={styles.heroCta}>
+            <Link
+              href={{
+                pathname: "/intresseanmalan",
+                query: { fastighet: "Södra Lillåstrand 24C" },
+              }}
+              className="btn-primary"
+            >
+              Gör en intresseanmälan
+            </Link>
+          </div>
         </div>
       </div>
 
@@ -72,16 +107,16 @@ export default function SodraLillastrand24C() {
             En välplanerad och effektiv bostad om 23 m² med pentry utrustat med
             mikrovågsugn och häll, ett fullt badrum med dusch samt egen
             tvättmaskin och torktumlare. Lägenheten erbjuder smarta
-            förvaringsmöjligheter och ligger i ett lugnt område med god
-            tillgång till centrum, mataffär och bussförbindelser.
-            Parkeringsplats finns att hyra separat.
+            förvaringsmöjligheter och ligger i ett lugnt område med god tillgång
+            till centrum, mataffär och bussförbindelser. Parkeringsplats finns
+            att hyra separat.
           </p>
           <p>
             Perfekt för dig som jobbar på USÖ – endast{" "}
-            <strong>3 minuter med cykel</strong> eller 10 minuters promenad
-            till Universitetssjukhuset Örebro. Även ett utmärkt val för dig
-            som studerar vid Örebro universitet, med enkla bussförbindelser
-            och kort resväg till campus.
+            <strong>3 minuter med cykel</strong> eller 10 minuters promenad till
+            Universitetssjukhuset Örebro. Även ett utmärkt val för dig som
+            studerar vid Örebro universitet, med enkla bussförbindelser och kort
+            resväg till campus.
           </p>
           <p>
             Uthyres omöblerad för <strong>5 900 kr/månad</strong> eller
@@ -168,7 +203,10 @@ export default function SodraLillastrand24C() {
       <div className={styles.gallery}>
         <div className={styles.galleryGrid}>
           {galleryImages.map((img) => (
-            <div key={img.src} className={`${styles.galleryImage} ${img.caption ? page.galleryImageWithCaption : ""}`}>
+            <div
+              key={img.src}
+              className={`${styles.galleryImage} ${img.caption ? page.galleryImageWithCaption : ""}`}
+            >
               <Image
                 src={img.src}
                 alt={img.alt}
@@ -176,7 +214,9 @@ export default function SodraLillastrand24C() {
                 sizes="(max-width: 768px) 50vw, 33vw"
                 style={{ objectFit: "cover" }}
               />
-              {img.caption && <p className={page.galleryCaption}>{img.caption}</p>}
+              {img.caption && (
+                <p className={page.galleryCaption}>{img.caption}</p>
+              )}
             </div>
           ))}
         </div>
@@ -209,7 +249,7 @@ export default function SodraLillastrand24C() {
 
       <div className={styles.ctaBanner}>
         <div className={styles.ctaBannerInner}>
-          <p>Intresserad av denna lägenhet?</p>
+          <p>Är du intresserad av lägenheten?</p>
           <Link
             href={{
               pathname: "/intresseanmalan",

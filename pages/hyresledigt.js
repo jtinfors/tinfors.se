@@ -1,13 +1,26 @@
+import Link from "next/link";
 import { useState } from "react";
+import Layout from "../components/Layout";
+import styles from "../styles/Listings.module.css";
 
-const MONTHS = ["januari","februari","mars","april","maj","juni","juli","augusti","september","oktober","november","december"];
+const MONTHS = [
+  "januari",
+  "februari",
+  "mars",
+  "april",
+  "maj",
+  "juni",
+  "juli",
+  "augusti",
+  "september",
+  "oktober",
+  "november",
+  "december",
+];
 function formatDate(dateStr) {
   const [year, month, day] = dateStr.split("-").map(Number);
   return `${day} ${MONTHS[month - 1]} ${year}`;
 }
-import Link from "next/link";
-import Layout from "../components/Layout";
-import styles from "../styles/Listings.module.css";
 
 const listings = [
   {
@@ -81,10 +94,38 @@ const listings = [
     moveInText: "Enligt överenskommelse",
     available: true,
     image: "/garageapartments/IMG_3110.webp",
-    includes: ["Pentry", "Badrum", "Tvättmaskin", "Torktumlare", "P-plats finns"],
+    includes: [
+      "Pentry",
+      "Badrum",
+      "Tvättmaskin",
+      "Torktumlare",
+      "P-plats finns",
+    ],
     url: "/fastigheterna/sodra-lillastrand-24c",
   },
-
+  {
+    id: 6,
+    state: "active",
+    type: "lagenhet",
+    address: "Hjortstorpsvägen 9",
+    area: "Örebro",
+    rooms: 2,
+    sqm: 75,
+    rent: 9902,
+    floor: 1,
+    moveInText: "Enligt överenskommelse",
+    available: true,
+    image: "/hjortstorpsvagen_9/2c16c8d9f6974aab9a7a3140df3077b9.jpeg",
+    includes: [
+      "Kök",
+      "Diskmaskin",
+      "Badrum",
+      "Tvättstuga",
+      "Förråd",
+      "P-plats finns",
+    ],
+    url: "/fastigheterna/hjortstorpsvagen-9-tva-rum-kok",
+  },
 ].filter((l) => l.state === "active");
 
 const categories = [
@@ -159,7 +200,9 @@ export default function HyresledigtPage() {
                     </div>
                     <div className={styles.cardMoveIn}>
                       Tillträde:{" "}
-                      {listing.moveInText ? listing.moveInText : formatDate(listing.moveIn)}
+                      {listing.moveInText
+                        ? listing.moveInText
+                        : formatDate(listing.moveIn)}
                     </div>
                   </div>
                 </div>

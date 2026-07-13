@@ -148,6 +148,29 @@ const listings = [
     ],
     url: "/fastigheterna/hjortstorpsvagen_28_1_rum_3_van",
   },
+  {
+    id: 8,
+    state: "active",
+    type: "lagenhet",
+    address: "Hjortstorpsvägen 28",
+    area: "Örebro",
+    rooms: 1,
+    sqm: 42,
+    rent: 6081,
+    floor: 1,
+    moveInText: "Enligt överenskommelse",
+    available: true,
+    image: "/hjortstorpsvagen_28_1/8c48a6dcd7f74a63930ba5fe35cbbe3b.jpeg",
+    includes: [
+      "Kök",
+      "Badrum",
+      "Diskmaskin",
+      "Tvättstuga",
+      "Förråd",
+      "P-plats tillgängligt i området",
+    ],
+    url: "/fastigheterna/1rum-orebro-orebro-lan-hjortstorpsvagen-28",
+  },
 ].filter((l) => l.state === "active");
 
 const categories = [

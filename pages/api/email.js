@@ -29,7 +29,7 @@ async function email(req, res) {
           "Content-Type": "application/x-www-form-urlencoded",
         },
         body: `secret=${process.env.RECAPTCHA_SECRET}&response=${req.body.token}`,
-      }
+      },
     );
     const token = await verificationRes.json();
 
@@ -37,7 +37,7 @@ async function email(req, res) {
       const { data } = await resend.emails.send({
         from: "info@tinfors.se",
         to: process.env.TARGET_EMAIL,
-        replyTo: process.env.TARGET_EMAIL,
+        replyTo: req.body.email || process.env.TARGET_EMAIL,
         subject: req.body.fastighet
           ? `Intresseanmälan (${req.body.fastighet}) från ${req.body.firstname} ${req.body.lastname}`
           : `Intresseanmälan från ${req.body.firstname} ${req.body.lastname}`,

@@ -1,4 +1,3 @@
-import { GoogleTagManager } from "@next/third-parties/google";
 import Image from "next/image";
 import Link from "next/link";
 import Layout from "../components/Layout";
@@ -29,7 +28,6 @@ export default function HomePage() {
       description="Tinfors Fastigheter erbjuder trivsamma hyreslägenheter i norra Örebro med promenadavstånd till centrum, resecentrum, USÖ och natursköna rekreationsområden."
       jsonLd={jsonLd}
     >
-      <GoogleTagManager gtmId="GTM-K2M95RTN" />
       {/* Hero */}
       <section className={styles.hero}>
         <img

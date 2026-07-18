@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
+import HomeqLink from "../components/HomeqLink";
 import Layout from "../components/Layout";
 import styles from "../styles/Listings.module.css";
 
@@ -221,6 +222,7 @@ export default function HyresledigtPage() {
           <div className={styles.grid}>
             {filtered.map((listing) => {
               const isInternal = listing.url.startsWith("/");
+              const isHomeq = listing.url.includes("homeq.se");
               const cardContent = (
                 <div className={styles.card}>
                   <div className={styles.cardImage}>
@@ -252,11 +254,21 @@ export default function HyresledigtPage() {
                   </div>
                 </div>
               );
-              return isInternal ? (
-                <Link href={listing.url} key={listing.id}>
-                  {cardContent}
-                </Link>
-              ) : (
+              if (isInternal) {
+                return (
+                  <Link href={listing.url} key={listing.id}>
+                    {cardContent}
+                  </Link>
+                );
+              }
+              if (isHomeq) {
+                return (
+                  <HomeqLink href={listing.url} key={listing.id}>
+                    {cardContent}
+                  </HomeqLink>
+                );
+              }
+              return (
                 <a href={listing.url} key={listing.id}>
                   {cardContent}
                 </a>

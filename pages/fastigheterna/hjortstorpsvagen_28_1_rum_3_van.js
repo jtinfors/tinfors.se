@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import HomeqLink from "../../components/HomeqLink";
 import Layout from "../../components/Layout";
 import styles from "../../styles/Fastighet.module.css";
 
@@ -58,9 +59,9 @@ export default function Hjortstorpsvagen28EttRumTreVan() {
           <h1 className={styles.heroTitle}>Hjortstorpsvägen 28 – Stor och ljus 1:a</h1>
           <p className={styles.heroLocation}>44 kvm nära Örebro centrum</p>
           <div className={styles.heroCta}>
-            <Link href={HOMEQ_URL} className="btn-primary">
+            <HomeqLink href={HOMEQ_URL} className="btn-primary">
               Intresseanmälan via HomeQ
-            </Link>
+            </HomeqLink>
           </div>
         </div>
       </div>
@@ -179,9 +180,9 @@ export default function Hjortstorpsvagen28EttRumTreVan() {
       <div className={styles.ctaBanner}>
         <div className={styles.ctaBannerInner}>
           <p>Är du intresserad av lägenheten?</p>
-          <Link href={HOMEQ_URL} className="btn-primary">
+          <HomeqLink href={HOMEQ_URL} className="btn-primary">
             Intresseanmälan via HomeQ
-          </Link>
+          </HomeqLink>
         </div>
       </div>
     </Layout>

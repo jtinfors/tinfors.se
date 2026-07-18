@@ -1,7 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import HomeqLink from "../../components/HomeqLink";
 import Layout from "../../components/Layout";
 import styles from "../../styles/Fastighet.module.css";
+
+const HOMEQ_URL =
+  "https://www.homeq.se/lagenhet/268621-2rum-orebro-orebro-lan-hjortstorpsvagen-9";
 
 const galleryImages = [
   {
@@ -78,12 +82,9 @@ export default function HjortstorpsvagenNioTvaRumKok() {
             Promenadavstånd till USÖ, campus och city
           </p>
           <div className={styles.heroCta}>
-            <Link
-              href="https://www.homeq.se/lagenhet/268621-2rum-orebro-orebro-lan-hjortstorpsvagen-9"
-              className="btn-primary"
-            >
+            <HomeqLink href={HOMEQ_URL} className="btn-primary">
               Intresseanmälan via HomeQ
-            </Link>
+            </HomeqLink>
           </div>
         </div>
       </div>
@@ -209,12 +210,9 @@ export default function HjortstorpsvagenNioTvaRumKok() {
             Boka en visning idag! Fyll i formuläret för intressanmälan så
             kontaktar vi dig!
           </p>
-          <Link
-            href="https://www.homeq.se/lagenhet/268621-2rum-orebro-orebro-lan-hjortstorpsvagen-9"
-            className="btn-primary"
-          >
+          <HomeqLink href={HOMEQ_URL} className="btn-primary">
             Intresseanmälan via HomeQ
-          </Link>
+          </HomeqLink>
         </div>
       </div>
     </Layout>

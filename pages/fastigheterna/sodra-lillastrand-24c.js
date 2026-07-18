@@ -1,6 +1,6 @@
-import { sendGTMEvent } from "@next/third-parties/google";
 import Image from "next/image";
 import Link from "next/link";
+import HomeqLink from "../../components/HomeqLink";
 import Layout from "../../components/Layout";
 import styles from "../../styles/Fastighet.module.css";
 import page from "../../styles/SodraLillastrand24C.module.css";
@@ -38,14 +38,6 @@ const galleryImages = [
 
 const HOMEQ_URL =
   "https://www.homeq.se/lagenhet/264414-1rum-orebro-orebro-lan-sodra-lillastrand-24";
-
-function trackHomeqClick(e) {
-  e.preventDefault();
-  sendGTMEvent({ event: "homeq_click" });
-  setTimeout(() => {
-    window.location.href = HOMEQ_URL;
-  }, 150);
-}
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -93,9 +85,9 @@ export default function SodraLillastrand24C() {
             3 min från Universitetssjukhuset Örebro
           </p>
           <div className={styles.heroCta}>
-            <a href={HOMEQ_URL} onClick={trackHomeqClick} className="btn-primary">
+            <HomeqLink href={HOMEQ_URL} className="btn-primary">
               Intresseanmälan via HomeQ
-            </a>
+            </HomeqLink>
           </div>
         </div>
       </div>
@@ -256,9 +248,9 @@ export default function SodraLillastrand24C() {
       <div className={styles.ctaBanner}>
         <div className={styles.ctaBannerInner}>
           <p>Är du intresserad av lägenheten?</p>
-          <a href={HOMEQ_URL} onClick={trackHomeqClick} className="btn-primary">
+          <HomeqLink href={HOMEQ_URL} className="btn-primary">
             Intresseanmälan via HomeQ
-          </a>
+          </HomeqLink>
         </div>
       </div>
     </Layout>

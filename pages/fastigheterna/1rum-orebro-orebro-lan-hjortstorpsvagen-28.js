@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import HomeqLink from "../../components/HomeqLink";
 import Layout from "../../components/Layout";
 import styles from "../../styles/Fastighet.module.css";
 
@@ -56,9 +57,9 @@ export default function HjortstorpsvagenTvattioattaFinEtta() {
           <h1 className={styles.heroTitle}>Hjortstorpsvägen 28 – Fin etta på norr</h1>
           <p className={styles.heroLocation}>42 kvm · Promenadavstånd till USÖ och city</p>
           <div className={styles.heroCta}>
-            <Link href={HOMEQ_URL} className="btn-primary">
+            <HomeqLink href={HOMEQ_URL} className="btn-primary">
               Intresseanmälan via HomeQ
-            </Link>
+            </HomeqLink>
           </div>
         </div>
       </div>
@@ -178,9 +179,9 @@ export default function HjortstorpsvagenTvattioattaFinEtta() {
       <div className={styles.ctaBanner}>
         <div className={styles.ctaBannerInner}>
           <p>Är du intresserad av lägenheten?</p>
-          <Link href={HOMEQ_URL} className="btn-primary">
+          <HomeqLink href={HOMEQ_URL} className="btn-primary">
             Intresseanmälan via HomeQ
-          </Link>
+          </HomeqLink>
         </div>
       </div>
     </Layout>

@@ -1,12 +1,23 @@
-import { sendGTMEvent } from "@next/third-parties/google";
-
 export default function HomeqLink({ href, className, children }) {
   const handleClick = (e) => {
     e.preventDefault();
-    sendGTMEvent({ event: "homeq_click" });
-    setTimeout(() => {
+    let navigated = false;
+    const navigate = () => {
+      if (navigated) return;
+      navigated = true;
       window.location.href = href;
-    }, 150);
+    };
+
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "conversion", {
+        send_to: "AW-18318655303/L4wXCODNn9IcEMf-gZ9E",
+        event_callback: navigate,
+      });
+    } else {
+      navigate();
+    }
+
+    setTimeout(navigate, 500);
   };
 
   return (
